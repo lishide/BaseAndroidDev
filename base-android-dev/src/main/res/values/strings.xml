@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BaseAndroidDev</string>
+    <string name="toast_networkError">网络连接失败</string>
+
+</resources>
