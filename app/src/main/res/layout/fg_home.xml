@@ -10,9 +10,22 @@
         android:text="HOME"
         android:textSize="30sp"/>
 
-    <Button
-        android:id="@+id/btn_gotoDemo"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="GotoDemo"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_gotoDemo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GotoDemo"/>
+
+        <Button
+            android:id="@+id/btn_gotoCF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GotoCF"/>
+    </LinearLayout>
+
 </FrameLayout>

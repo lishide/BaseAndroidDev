@@ -1,6 +1,7 @@
 package com.base.adev.activity;
 
 import android.annotation.TargetApi;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -22,7 +23,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     public BaseActivity() { /* compiled code */ }
 
-    protected BaseActivity activity;
+    protected BaseActivity context;
     protected View rootView;
 
     public boolean useTitle = true;
@@ -47,7 +48,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         if (null != extras) {
             getBundleExtras(extras);
         }
-        activity = this;
+        context = this;
         initContentView(savedInstanceState);
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         if (null != mToolbar) {

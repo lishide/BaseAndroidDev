@@ -29,7 +29,10 @@
 
         <activity
             android:name=".activity.TextDemoActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.CoverFlowDemoActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
