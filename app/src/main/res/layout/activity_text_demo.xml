@@ -7,9 +7,21 @@
 
     <include layout="@layout/layout_toolbar"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello"/>
+    <LinearLayout
+        android:id="@+id/notice_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
 
+        <com.base.adev.view.MarqueeTextView
+            android:id="@+id/tvScroll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"/>
+    </LinearLayout>
 </LinearLayout>
