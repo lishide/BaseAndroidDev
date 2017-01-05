@@ -39,7 +39,9 @@ public class MyApplication extends BaseApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-        instance = this;
+        if (instance == null) {
+            instance = this;
+        }
         context = getApplicationContext();
         queue = Volley.newRequestQueue(getApplicationContext());
 

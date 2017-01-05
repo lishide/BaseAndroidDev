@@ -34,4 +34,6 @@ dependencies {
     compile 'com.bigkoo:svprogresshud:1.0.6'
     compile project(path: ':base-android-dev')
     compile project(':base-android-dev')
+
+    compile 'com.yanzhenjie:recyclerview-swipe:1.0.2'
 }

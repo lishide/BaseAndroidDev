@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.base.adev.R;
 import com.base.adev.utils.ToastUtils;
 
 public abstract class BaseFragment extends Fragment {
@@ -19,21 +21,29 @@ public abstract class BaseFragment extends Fragment {
     protected View rootView;
 
     public Toolbar mToolbar;
-    public TextView title;
+    public TextView tvTitle;
     public ImageView back;
     public TextView tv_menu;
     public ImageView iv_menu;
 
     public BaseFragment() { /* compiled code */ }
 
+    protected AppCompatActivity context;
+
     @Override
     @Nullable
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
+        context = (AppCompatActivity) getActivity();
+
         if (null != getArguments()) {
             getBundleExtras(getArguments());
         }
         View view = initContentView(inflater, container, savedInstanceState);
+        mToolbar = (Toolbar) view.findViewById(R.id.toolbar);
+
+        initTitle(view);
+
         initView(view);
         initLogic(view);
         return view;
@@ -69,6 +79,23 @@ public abstract class BaseFragment extends Fragment {
      * @param bundle
      */
     protected abstract void getBundleExtras(Bundle bundle);
+
+    // 初始化标题栏
+    protected void initTitle(View view) {
+        tvTitle = (TextView) view.findViewById(R.id.toolbar_title);
+        back = (ImageView) view.findViewById(R.id.toolbar_back);
+        iv_menu = (ImageView) view.findViewById(R.id.toolbar_iv_menu);
+        tv_menu = (TextView) view.findViewById(R.id.toolbar_tv_menu);
+
+    }
+
+    public void setTitle(String string) {
+        tvTitle.setText(string);
+    }
+
+    public void setTitle(int id) {
+        tvTitle.setText(id);
+    }
 
     //Toast显示
     protected void showShortToast(String string) {

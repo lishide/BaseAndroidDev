@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="main_item_title">
+        <item>文本类自定义控件集合</item>
+        <item>CoverFlow示例</item>
+    </string-array>
+
+    <string-array name="main_item_des">
+        <item>整理文本类自定义控件</item>
+        <item>参考ImageCoverFlow-master修改的，使用方法与LIST一样，设置相应的控件、修改imageCoverFlow布局的参数即可。</item>
+    </string-array>
+</resources>

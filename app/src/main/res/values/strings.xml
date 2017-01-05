@@ -7,4 +7,7 @@
     <string name="tab1">首页</string>
     <string name="tab2">TAB2</string>
     <string name="tab3">TAB3</string>
+    <string name="text_text_demo">文本类自定义控件集合</string>
+    <string name="text_coverFlow_demo">CoverFlow示例</string>
+
 </resources>

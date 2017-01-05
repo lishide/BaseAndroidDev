@@ -1,7 +1,6 @@
 package com.base.adev.activity;
 
 import android.annotation.TargetApi;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -77,6 +76,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void initTitle() {
         title = (TextView) findViewById(R.id.toolbar_title);
         back = (ImageView) findViewById(R.id.toolbar_back);
+        back.setVisibility(View.VISIBLE);
         iv_menu = (ImageView) findViewById(R.id.toolbar_iv_menu);
         tv_menu = (TextView) findViewById(R.id.toolbar_tv_menu);
         if (null != back) {

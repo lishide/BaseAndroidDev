@@ -22,7 +22,8 @@
                 android:layout_height="24dp"
                 android:layout_gravity="left|center_vertical"
                 android:padding="4dp"
-                android:src="@drawable/ic_back"/>
+                android:src="@drawable/ic_back"
+                android:visibility="gone"/>
 
             <TextView
                 android:id="@id/toolbar_title"
@@ -34,7 +35,7 @@
                 android:maxEms="8"
                 android:maxLines="1"
                 android:textColor="@android:color/white"
-                android:textSize="18sp"/>
+                android:textSize="20sp"/>
 
             <RelativeLayout
                 android:id="@id/toolbar_layout_menu"

@@ -2,19 +2,30 @@ package com.example.dev.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.base.adev.fragment.BaseFragment;
 import com.example.dev.R;
 import com.example.dev.activity.CoverFlowDemoActivity;
 import com.example.dev.activity.TextDemoActivity;
+import com.example.dev.adapter.MainWidgetAdapter;
+import com.example.dev.listener.OnItemClickListener;
+import com.example.dev.view.ListViewDecoration;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class HomeFragment extends BaseFragment {
     private static final String TAG = "HomeFragment";
-
+    private RecyclerView recyclerView;
+    private List<String> titles;
+    private List<String> descriptions;
+    private MainWidgetAdapter mMainWidgetAdapter;
 
     public static HomeFragment newInstance(Bundle bundle) {
         HomeFragment fragment = new HomeFragment();
@@ -32,28 +43,38 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     protected void initView(View view) {
-        Button btnGotoDemo = (Button) view.findViewById(R.id.btn_gotoDemo);
-        Button btnGotoCF = (Button) view.findViewById(R.id.btn_gotoCF);
-        btnGotoDemo.setOnClickListener(new View.OnClickListener() {
+        recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.addItemDecoration(new ListViewDecoration());
+
+        titles = Arrays.asList(getResources().getStringArray(R.array.main_item_title));
+        descriptions = Arrays.asList(getResources().getStringArray(R.array.main_item_des));
+        mMainWidgetAdapter = new MainWidgetAdapter(titles, descriptions);
+        recyclerView.setAdapter(mMainWidgetAdapter);
+        mMainWidgetAdapter.setOnItemClickListener(new OnItemClickListener() {
             @Override
-            public void onClick(View v) {
-                Bundle bundle = new Bundle();
-                bundle.putString("title", "TextDemo");
-                readyGo(TextDemoActivity.class, bundle);
-            }
-        });
-        btnGotoCF.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Bundle bundle = new Bundle();
-                bundle.putString("title", "CoverFlowDemo");
-                readyGo(CoverFlowDemoActivity.class, bundle);
+            public void onItemClick(int position) {
+                Bundle bundle;
+                switch (position) {
+                    case 0:
+                        bundle = new Bundle();
+                        bundle.putString("title", getString(R.string.text_text_demo));
+                        readyGo(TextDemoActivity.class, bundle);
+                        break;
+                    case 1:
+                        bundle = new Bundle();
+                        bundle.putString("title", getString(R.string.text_coverFlow_demo));
+                        readyGo(CoverFlowDemoActivity.class, bundle);
+                        break;
+                }
             }
         });
     }
 
     @Override
     protected void initLogic(View view) {
+        setTitle(R.string.tab1);
 
     }
 
