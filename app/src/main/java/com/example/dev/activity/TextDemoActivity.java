@@ -1,8 +1,10 @@
 package com.example.dev.activity;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.base.adev.activity.BaseActivity;
 import com.base.adev.utils.ScreenUtil;
@@ -10,13 +12,17 @@ import com.base.adev.view.MarqueeTextView;
 import com.base.adev.view.NoticeView;
 import com.example.dev.R;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 
 public class TextDemoActivity extends BaseActivity {
 
     private String title;
     private MarqueeTextView marqueeTextView;//跑马灯控件
     private NoticeView noticeView;//广告条控件
+    private TextView mTextView;//LED文字控件
 
     @Override
     protected void initContentView(Bundle bundle) {
@@ -28,6 +34,7 @@ public class TextDemoActivity extends BaseActivity {
     protected void initView() {
         marqueeTextView = (MarqueeTextView) findViewById(R.id.tvScroll);
         noticeView = (NoticeView) findViewById(R.id.switcherView);
+        mTextView = (TextView) findViewById(R.id.main_clock_time);
     }
 
     @Override
@@ -71,4 +78,31 @@ public class TextDemoActivity extends BaseActivity {
     protected void getBundleExtras(Bundle extras) {
         title = extras.getString("title");
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        handler.post(mTimeRefresher);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        handler.removeCallbacks(mTimeRefresher);
+    }
+
+    private static final int REFRESH_DELAY = 500;
+
+    private final Handler handler = new Handler();
+    private final Runnable mTimeRefresher = new Runnable() {
+
+        @Override
+        public void run() {
+            SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss", Locale.CHINA);
+            final Date curDate = new Date(System.currentTimeMillis());
+            String str = formatter.format(curDate);
+            mTextView.setText(str);
+            handler.postDelayed(this, REFRESH_DELAY);
+        }
+    };
 }

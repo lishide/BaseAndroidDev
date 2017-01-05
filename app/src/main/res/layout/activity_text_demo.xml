@@ -34,4 +34,31 @@
         app:noticeRollingTime="4000"
         app:noticeTextColor="@color/colorPrimaryDark"
         app:noticeTextSize="16sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/black"
+        android:gravity="center">
+
+        <com.base.adev.view.LedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/default_time"
+            android:textColor="#3D3D3D"
+            android:textSize="40sp"/>
+
+        <com.base.adev.view.LedTextView
+            android:id="@+id/main_clock_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:shadowColor="@android:color/white"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="10"
+            android:textColor="@android:color/white"
+            android:textSize="40sp"/>
+    </RelativeLayout>
 </LinearLayout>

@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">BaseAndroidDev</string>
     <string name="toast_networkError">网络连接失败</string>
+    <string name="default_time">88:88:88</string>
 
 </resources>
