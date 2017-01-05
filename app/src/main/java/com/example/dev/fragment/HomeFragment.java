@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import com.base.adev.fragment.BaseFragment;
 import com.example.dev.R;
 import com.example.dev.activity.CoverFlowDemoActivity;
+import com.example.dev.activity.LikeIosDialogActivity;
 import com.example.dev.activity.TextDemoActivity;
 import com.example.dev.adapter.MainWidgetAdapter;
 import com.example.dev.listener.OnItemClickListener;
@@ -66,6 +67,11 @@ public class HomeFragment extends BaseFragment {
                         bundle = new Bundle();
                         bundle.putString("title", getString(R.string.text_coverFlow_demo));
                         readyGo(CoverFlowDemoActivity.class, bundle);
+                        break;
+                    case 2:
+                        bundle = new Bundle();
+                        bundle.putString("title", getString(R.string.text_iOS_dialog));
+                        readyGo(LikeIosDialogActivity.class, bundle);
                         break;
                 }
             }
