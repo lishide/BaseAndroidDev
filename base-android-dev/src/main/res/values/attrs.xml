@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <!--CoverFlow控件属性-->
     <declare-styleable name="ImageCoverFlowView">
         <attr name="visibleImage" format="integer"/>
         <attr name="reflectionHeight" format="fraction"/>
@@ -17,4 +17,10 @@
         </attr>
     </declare-styleable>
 
+    <!--广告条控件属性-->
+    <declare-styleable name="NoticeView">
+        <attr name="noticeTextColor" format="reference|color"/>
+        <attr name="noticeTextSize" format="dimension"/>
+        <attr name="noticeRollingTime" format="integer"/>
+    </declare-styleable>
 </resources>

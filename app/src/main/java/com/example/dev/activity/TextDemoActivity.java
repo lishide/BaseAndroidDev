@@ -7,12 +7,16 @@ import android.widget.LinearLayout;
 import com.base.adev.activity.BaseActivity;
 import com.base.adev.utils.ScreenUtil;
 import com.base.adev.view.MarqueeTextView;
+import com.base.adev.view.NoticeView;
 import com.example.dev.R;
+
+import java.util.ArrayList;
 
 public class TextDemoActivity extends BaseActivity {
 
     private String title;
-    private MarqueeTextView marqueeTextView;
+    private MarqueeTextView marqueeTextView;//跑马灯控件
+    private NoticeView noticeView;//广告条控件
 
     @Override
     protected void initContentView(Bundle bundle) {
@@ -23,6 +27,12 @@ public class TextDemoActivity extends BaseActivity {
     @Override
     protected void initView() {
         marqueeTextView = (MarqueeTextView) findViewById(R.id.tvScroll);
+        noticeView = (NoticeView) findViewById(R.id.switcherView);
+    }
+
+    @Override
+    protected void initLogic() {
+        setTitle(title);
 
         int screenWidth = ScreenUtil.getScreenWidthPix(context);
         ViewGroup.MarginLayoutParams margin1 = new ViewGroup.MarginLayoutParams(
@@ -37,12 +47,24 @@ public class TextDemoActivity extends BaseActivity {
         marqueeTextView.setCoordinateY(140);
         marqueeTextView.setCurrentPosition(screenWidth);//设置滚动信息从滚动区域的右边出来
         marqueeTextView.setSpeed(3);
-    }
 
-    @Override
-    protected void initLogic() {
-        setTitle(title);
         marqueeTextView.setText("我是滚动字幕啊12345，我是滚动字幕啊12345，我是滚动字幕啊12345");
+
+        final ArrayList<String> strs = new ArrayList<>();
+        strs.add("哎呦，不错哦");
+        strs.add("天道酬勤");
+        strs.add("上善若水");
+        strs.add("Hello world");
+        noticeView.setResource(strs);
+
+        noticeView.setOnItemClick(new NoticeView.OnItemClick() {
+            @Override
+            public void Click(int index) {
+                showShortToast(strs.get(index));
+            }
+        });
+
+        noticeView.start(2000);
     }
 
     @Override
