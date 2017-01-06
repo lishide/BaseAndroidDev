@@ -27,6 +27,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".activity.BlankActivity"/>
+
         <activity
             android:name=".activity.TextDemoActivity"
             android:screenOrientation="portrait"/>
@@ -36,9 +38,7 @@
         <activity
             android:name=".activity.LikeIosDialogActivity"
             android:screenOrientation="portrait"/>
-        <activity
-            android:name=".activity.BlankActivity"
-            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.CityPickerActivity"/>
     </application>
 
 </manifest>

@@ -7,8 +7,12 @@
     <string name="tab1">首页</string>
     <string name="tab2">TAB2</string>
     <string name="tab3">TAB3</string>
+
     <string name="text_text_demo">文本类自定义控件集合</string>
     <string name="text_coverFlow_demo">CoverFlow示例</string>
     <string name="text_iOS_dialog">仿iOS的Dialog</string>
+    <string name="text_city_picker">省市区三级联动</string>
+    <string name="text_picker_tip">选择省市区</string>
+    <string name="text_picker_res">选择结果：</string>
 
 </resources>

@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.base.adev.fragment.BaseFragment;
 import com.example.dev.R;
+import com.example.dev.activity.CityPickerActivity;
 import com.example.dev.activity.CoverFlowDemoActivity;
 import com.example.dev.activity.LikeIosDialogActivity;
 import com.example.dev.activity.TextDemoActivity;
@@ -56,22 +57,23 @@ public class HomeFragment extends BaseFragment {
         mMainWidgetAdapter.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
-                Bundle bundle;
+                Bundle bundle = new Bundle();
                 switch (position) {
                     case 0:
-                        bundle = new Bundle();
                         bundle.putString("title", getString(R.string.text_text_demo));
                         readyGo(TextDemoActivity.class, bundle);
                         break;
                     case 1:
-                        bundle = new Bundle();
                         bundle.putString("title", getString(R.string.text_coverFlow_demo));
                         readyGo(CoverFlowDemoActivity.class, bundle);
                         break;
                     case 2:
-                        bundle = new Bundle();
                         bundle.putString("title", getString(R.string.text_iOS_dialog));
                         readyGo(LikeIosDialogActivity.class, bundle);
+                        break;
+                    case 3:
+                        bundle.putString("title", getString(R.string.text_city_picker));
+                        readyGo(CityPickerActivity.class, bundle);
                         break;
                 }
             }
