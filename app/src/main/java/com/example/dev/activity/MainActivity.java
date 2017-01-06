@@ -8,7 +8,6 @@ import com.example.dev.fragment.DemoFragment;
 import com.example.dev.fragment.HomeFragment;
 import com.example.dev.fragment.Demo2Fragment;
 
-
 public class MainActivity extends BaseTabBottomActivity {
 
     @Override

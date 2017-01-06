@@ -36,6 +36,9 @@
         <activity
             android:name=".activity.LikeIosDialogActivity"
             android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.BlankActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
