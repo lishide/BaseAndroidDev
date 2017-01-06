@@ -133,6 +133,8 @@ BaseActivity、BaseFragment、BaseAdapter
 |compile 'com.ashokvarma.android:bottom-navigation-bar:1.3.0'|BottomNavigation--Bottom Navigation Bar|
 |compile 'com.bigkoo:svprogresshud:1.0.6'|SVProgressHUD For Android 精仿iOS的提示库|
 |compile 'com.yanzhenjie:recyclerview-swipe:1.0.2'|SwipeRecyclerView--RecyclerView侧滑菜单，长按拖拽，滑动删除，加载更多下拉刷新等|
+|compile 'liji.library.dev:citypickerview:0.9.0'|省市区三级联动|
+
 
 > 本人会坚持在这个项目上实践最新的技术，逐渐完善，让它越来越完美！ Ps：本项目中使用的许多好用的轮子均根据网上各位大牛的开源项目参考和修改而来，首先向各位致谢，如果有什么使用不当的地方，请联系我。您在使用过程中，发现 bug 或有好的建议欢迎issue、email(lishidezy@gmail.com)，如果感觉对你有帮助也欢迎点个 star，留下点印记吧。
 
