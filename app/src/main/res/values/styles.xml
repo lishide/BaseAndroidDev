@@ -10,5 +10,10 @@
         <item name="android:clipToPadding">true</item>
         <item name="android:fitsSystemWindows">true</item>
     </style>
-
+    <!--图片选择器界面使用主题1-->
+    <style name="Theme_Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--<item name="gallery_ucrop_title_text">@string/gallery_ucrop_menu_crop</item>-->
+    </style>
+    <!--图片选择器界面使用主题2-->
+    <style name="Theme_Light.Default"/>
 </resources>

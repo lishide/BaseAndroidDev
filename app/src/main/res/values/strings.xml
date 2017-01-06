@@ -14,5 +14,9 @@
     <string name="text_city_picker">省市区三级联动</string>
     <string name="text_picker_tip">选择省市区</string>
     <string name="text_picker_res">选择结果：</string>
+    <string name="text_gallery">图片/视频文件选择器</string>
+    <string name="text_open">打开</string>
+    <string name="text_single">单选</string>
+    <string name="text_multi">多选</string>
 
 </resources>

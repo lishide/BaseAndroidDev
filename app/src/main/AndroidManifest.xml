@@ -10,6 +10,12 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
      
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!--声明使用相机-->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true"/>
 
     <application
         android:name="com.example.dev.application.MyApplication"
@@ -19,6 +25,18 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!--以下两个activity的声明用来打开图片选择器界面-->
+        <activity
+            android:name="cn.finalteam.rxgalleryfinal.ui.activity.MediaActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme_Light.Default"/>
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme_Light.Default"/>
+
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -39,6 +57,7 @@
             android:name=".activity.LikeIosDialogActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".activity.CityPickerActivity"/>
+        <activity android:name=".activity.GalleryActivity"/>
     </application>
 
 </manifest>
