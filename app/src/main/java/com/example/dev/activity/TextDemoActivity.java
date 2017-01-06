@@ -91,6 +91,12 @@ public class TextDemoActivity extends BaseActivity {
         handler.removeCallbacks(mTimeRefresher);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        noticeView.onDestroy();
+    }
+
     private static final int REFRESH_DELAY = 500;
 
     private final Handler handler = new Handler();
