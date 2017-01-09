@@ -3,7 +3,6 @@ package com.example.dev.activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.base.adev.activity.BaseActivity;
 import com.base.adev.view.coverflow.CoverFlowView;
@@ -77,8 +76,7 @@ public class CoverFlowDemoActivity extends BaseActivity implements View.OnClickL
             public void onClick(int position, View itemView) {
                 ChannelBean channelBean = channelBeanList.get(position);
 
-                Toast.makeText(context, "点击事件 position：" + position
-                        + "， text：" + channelBean.getName(), Toast.LENGTH_SHORT).show();
+                showShortToast("点击事件 position：" + position + "， text：" + channelBean.getName());
             }
         });
     }
@@ -94,11 +92,11 @@ public class CoverFlowDemoActivity extends BaseActivity implements View.OnClickL
                 break;
             case R.id.btn_get_top://获取最上面Item的position
                 int position = coverFlowView.getTopViewPosition();
-                Toast.makeText(context, position + "", Toast.LENGTH_SHORT).show();
+                showShortToast("" + position);
                 break;
             case R.id.btn_get_top_view://获取最上面Item的View
                 CoverFlowAdapter.Holder holder = (CoverFlowAdapter.Holder) coverFlowView.getTopView().getTag();
-                Toast.makeText(context, holder.tv.getText() + "", Toast.LENGTH_SHORT).show();
+                showShortToast(holder.tv.getText() + "");
                 break;
             default:
                 break;
