@@ -9,8 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:background="@color/colorPrimary"
-        android:foregroundGravity="center_vertical"
-        android:padding="0dp">
+        android:foregroundGravity="center_vertical">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -20,7 +19,7 @@
                 android:id="@id/toolbar_back"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_gravity="left|center_vertical"
+                android:layout_gravity="center_vertical"
                 android:padding="4dp"
                 android:src="@drawable/ic_back"
                 android:visibility="gone"/>
@@ -28,40 +27,30 @@
             <TextView
                 android:id="@id/toolbar_title"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ellipsize="end"
-                android:gravity="center"
                 android:maxEms="8"
                 android:maxLines="1"
                 android:textColor="@android:color/white"
                 android:textSize="20sp"/>
 
-            <RelativeLayout
-                android:id="@id/toolbar_layout_menu"
+            <ImageView
+                android:id="@id/toolbar_iv_menu"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="15dp"
+                android:padding="4dp"/>
+
+            <TextView
+                android:id="@id/toolbar_tv_menu"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="right|center_vertical"
-                android:orientation="horizontal"
-                android:paddingLeft="5dp"
-                android:paddingRight="10dp">
-
-                <ImageView
-                    android:id="@id/toolbar_iv_menu"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_centerVertical="true"/>
-
-                <TextView
-                    android:id="@id/toolbar_tv_menu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_centerVertical="true"
-                    android:gravity="center"
-                    android:textColor="@android:color/white"
-                    android:textSize="14sp"/>
-
-            </RelativeLayout>
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="15dp"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"/>
 
         </FrameLayout>
     </android.support.v7.widget.Toolbar>
