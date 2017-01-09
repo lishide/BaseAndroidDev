@@ -3,7 +3,6 @@ package com.example.dev.activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.base.adev.activity.BaseActivity;
 import com.base.adev.view.ActionSheetDialog;
@@ -123,90 +122,70 @@ public class LikeIosDialogActivity extends BaseActivity implements View.OnClickL
                                 new ActionSheetDialog.OnSheetItemClickListener() {
                                     @Override
                                     public void onClick(int which) {
-                                        Toast.makeText(LikeIosDialogActivity.this,
-                                                "item" + which, Toast.LENGTH_SHORT)
-                                                .show();
+                                        showShortToast("item" + which);
                                     }
                                 })
                         .addSheetItem("条目二", ActionSheetDialog.SheetItemColor.Blue,
                                 new ActionSheetDialog.OnSheetItemClickListener() {
                                     @Override
                                     public void onClick(int which) {
-                                        Toast.makeText(LikeIosDialogActivity.this,
-                                                "item" + which, Toast.LENGTH_SHORT)
-                                                .show();
+                                        showShortToast("item" + which);
                                     }
                                 })
                         .addSheetItem("条目三", ActionSheetDialog.SheetItemColor.Blue,
                                 new ActionSheetDialog.OnSheetItemClickListener() {
                                     @Override
                                     public void onClick(int which) {
-                                        Toast.makeText(LikeIosDialogActivity.this,
-                                                "item" + which, Toast.LENGTH_SHORT)
-                                                .show();
+                                        showShortToast("item" + which);
                                     }
                                 })
                         .addSheetItem("条目四", ActionSheetDialog.SheetItemColor.Blue,
                                 new ActionSheetDialog.OnSheetItemClickListener() {
                                     @Override
                                     public void onClick(int which) {
-                                        Toast.makeText(LikeIosDialogActivity.this,
-                                                "item" + which, Toast.LENGTH_SHORT)
-                                                .show();
+                                        showShortToast("item" + which);
                                     }
                                 })
                         .addSheetItem("条目五", ActionSheetDialog.SheetItemColor.Blue,
                                 new ActionSheetDialog.OnSheetItemClickListener() {
                                     @Override
                                     public void onClick(int which) {
-                                        Toast.makeText(LikeIosDialogActivity.this,
-                                                "item" + which, Toast.LENGTH_SHORT)
-                                                .show();
+                                        showShortToast("item" + which);
                                     }
                                 })
                         .addSheetItem("条目六", ActionSheetDialog.SheetItemColor.Blue,
                                 new ActionSheetDialog.OnSheetItemClickListener() {
                                     @Override
                                     public void onClick(int which) {
-                                        Toast.makeText(LikeIosDialogActivity.this,
-                                                "item" + which, Toast.LENGTH_SHORT)
-                                                .show();
+                                        showShortToast("item" + which);
                                     }
                                 })
                         .addSheetItem("条目七", ActionSheetDialog.SheetItemColor.Blue,
                                 new ActionSheetDialog.OnSheetItemClickListener() {
                                     @Override
                                     public void onClick(int which) {
-                                        Toast.makeText(LikeIosDialogActivity.this,
-                                                "item" + which, Toast.LENGTH_SHORT)
-                                                .show();
+                                        showShortToast("item" + which);
                                     }
                                 })
                         .addSheetItem("条目八", ActionSheetDialog.SheetItemColor.Blue,
                                 new ActionSheetDialog.OnSheetItemClickListener() {
                                     @Override
                                     public void onClick(int which) {
-                                        Toast.makeText(LikeIosDialogActivity.this,
-                                                "item" + which, Toast.LENGTH_SHORT)
-                                                .show();
+                                        showShortToast("item" + which);
                                     }
                                 })
                         .addSheetItem("条目九", ActionSheetDialog.SheetItemColor.Blue,
                                 new ActionSheetDialog.OnSheetItemClickListener() {
                                     @Override
                                     public void onClick(int which) {
-                                        Toast.makeText(LikeIosDialogActivity.this,
-                                                "item" + which, Toast.LENGTH_SHORT)
-                                                .show();
+                                        showShortToast("item" + which);
                                     }
                                 })
                         .addSheetItem("条目十", ActionSheetDialog.SheetItemColor.Blue,
                                 new ActionSheetDialog.OnSheetItemClickListener() {
                                     @Override
                                     public void onClick(int which) {
-                                        Toast.makeText(LikeIosDialogActivity.this,
-                                                "item" + which, Toast.LENGTH_SHORT)
-                                                .show();
+                                        showShortToast("item" + which);
                                     }
                                 }).show();
                 break;
