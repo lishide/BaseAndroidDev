@@ -39,8 +39,7 @@ public class TextDemoActivity extends BaseActivity {
 
     @Override
     protected void initLogic() {
-        setTitle(title);
-
+        mToolbar.setTitle(title);
         int screenWidth = ScreenUtil.getScreenWidthPix(context);
         ViewGroup.MarginLayoutParams margin1 = new ViewGroup.MarginLayoutParams(
                 marqueeTextView.getLayoutParams());

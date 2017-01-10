@@ -10,7 +10,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.base.adev.R;
@@ -21,10 +20,7 @@ public abstract class BaseFragment extends Fragment {
     protected View rootView;
 
     public Toolbar mToolbar;
-    public TextView tvTitle;
-    public ImageView back;
-    public TextView tv_menu;
-    public ImageView iv_menu;
+    public TextView mTvCenterTitle;
 
     public BaseFragment() { /* compiled code */ }
 
@@ -82,19 +78,15 @@ public abstract class BaseFragment extends Fragment {
 
     // 初始化标题栏
     protected void initTitle(View view) {
-        tvTitle = (TextView) view.findViewById(R.id.toolbar_title);
-        back = (ImageView) view.findViewById(R.id.toolbar_back);
-        iv_menu = (ImageView) view.findViewById(R.id.toolbar_iv_menu);
-        tv_menu = (TextView) view.findViewById(R.id.toolbar_tv_menu);
-
+        mTvCenterTitle = (TextView) view.findViewById(R.id.tv_centerTitle);
     }
 
-    public void setTitle(String string) {
-        tvTitle.setText(string);
+    public void setCenterTitle(String string) {
+        mTvCenterTitle.setText(string);
     }
 
-    public void setTitle(int id) {
-        tvTitle.setText(id);
+    public void setCenterTitle(int id) {
+        mTvCenterTitle.setText(id);
     }
 
     //Toast显示

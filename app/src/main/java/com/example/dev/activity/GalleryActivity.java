@@ -39,7 +39,7 @@ public class GalleryActivity extends BaseActivity {
 
     @Override
     protected void initLogic() {
-        setTitle(title);
+        mToolbar.setTitle(title);
 
         mBtnOpen.setOnClickListener(new View.OnClickListener() {
             @Override

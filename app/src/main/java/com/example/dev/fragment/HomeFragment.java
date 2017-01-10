@@ -87,8 +87,7 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     protected void initLogic(View view) {
-        setTitle(R.string.tab1);
-
+      setCenterTitle(R.string.tab1);
     }
 
     @Override

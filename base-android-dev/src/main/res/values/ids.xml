@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="toolbar" type="id" />
-    <item name="toolbar_back" type="id" />
-    <item name="toolbar_title" type="id" />
-    <item name="toolbar_layout_menu" type="id" />
-    <item name="toolbar_iv_menu" type="id" />
-    <item name="toolbar_tv_menu" type="id" />
+    <item name="tv_centerTitle" type="id" />
+
     <!-- 使用baselist需要使用的id -->
     <item name="base_list" type="id" />
 

@@ -34,7 +34,7 @@ public class LikeIosDialogActivity extends BaseActivity implements View.OnClickL
 
     @Override
     protected void initLogic() {
-        setTitle(title);
+        mToolbar.setTitle(title);
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
         btn3.setOnClickListener(this);

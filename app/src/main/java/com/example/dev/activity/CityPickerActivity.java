@@ -33,7 +33,7 @@ public class CityPickerActivity extends BaseActivity {
 
     @Override
     protected void initLogic() {
-        setTitle(title);
+        mToolbar.setTitle(title);
 
         btnPicker.setOnClickListener(new View.OnClickListener() {
             @Override

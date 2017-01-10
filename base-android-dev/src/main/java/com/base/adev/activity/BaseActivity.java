@@ -2,6 +2,7 @@ package com.base.adev.activity;
 
 import android.annotation.TargetApi;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,7 +11,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.base.adev.R;
@@ -27,11 +27,8 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     public boolean useTitle = true;
 
-    public Toolbar mToolbar;
-    public TextView title;
-    public ImageView back;
-    public TextView tv_menu;
-    public ImageView iv_menu;
+    protected Toolbar mToolbar;
+    protected TextView mTvCenterTitle;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -74,27 +71,27 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected abstract void getBundleExtras(Bundle extras);
 
     protected void initTitle() {
-        title = (TextView) findViewById(R.id.toolbar_title);
-        back = (ImageView) findViewById(R.id.toolbar_back);
-        back.setVisibility(View.VISIBLE);
-        iv_menu = (ImageView) findViewById(R.id.toolbar_iv_menu);
-        tv_menu = (TextView) findViewById(R.id.toolbar_tv_menu);
-        if (null != back) {
-            back.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    finish();
-                }
-            });
-        }
+        //  设置Toolbar title文字颜色
+        mToolbar.setTitleTextColor(Color.WHITE);
+        //设置NavigationIcon
+        mToolbar.setNavigationIcon(R.mipmap.navigation_back_white);
+        // 设置navigation button 点击事件
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        mTvCenterTitle = (TextView) findViewById(R.id.tv_centerTitle);
     }
 
-    public void setTitle(String string) {
-        title.setText(string);
+    public void setCenterTitle(String string) {
+        mTvCenterTitle.setText(string);
     }
 
-    public void setTitle(int id) {
-        title.setText(id);
+    public void setCenterTitle(int id) {
+        mTvCenterTitle.setText(id);
     }
 
     @TargetApi(19)

@@ -48,7 +48,7 @@ public class CoverFlowDemoActivity extends BaseActivity implements View.OnClickL
 
     @Override
     protected void initLogic() {
-        setTitle(title);
+        mToolbar.setTitle(title);
         initListDataAndAction();
 
     }
