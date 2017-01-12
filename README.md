@@ -59,7 +59,7 @@ BaseActivity、BaseFragment、BaseAdapter
                     map, new Response.Listener<JSONObject>() {
                 @Override
                 public void onResponse(JSONObject jsonObject) {
-                    updateShopPic();
+                    updatePic();
                 }
             }, new Response.ErrorListener() {
                 @Override
@@ -76,11 +76,11 @@ BaseActivity、BaseFragment、BaseAdapter
             });
         }
         
-        private void updateShopPic() {
+        private void updatePic() {
             Map<String, String> params = new HashMap<>();
             params.put("id", "1");
             params.put("pic", cutnameString);
-            VolleyRequestUtil.RequestPost(this, "updateshoppic.php", "updateShopPic", params,
+            VolleyRequestUtil.RequestPost(this, url, "tag", params,
                     new VolleyListenerInterface(this, VolleyListenerInterface.mListener,
                             VolleyListenerInterface.mErrorListener) {
                         // Volley请求成功时调用的函数
