@@ -1,13 +1,13 @@
 # BaseAndroidDev
-一个基本的开发框架，便于自己及团队快速开发，包含各种实用的BaseActivity、BaseFragment、framework、utils等，工(lao)程(si)师(ji)必备。
+一个基本的开发框架，便于自己及团队快速开发，包含各种实用的 BaseActivity 、BaseFragment 、framework 、utils  等，工（lao）程（si）师（ji）必备。
 
 ##一、Base
 BaseActivity、BaseFragment、BaseAdapter
 
-## 二、Net framework\Volley
-关于更多volley的介绍和使用方法，请移步至本人的另一repo：[MyVolley：Volley的使用及其工具类的封装][1] 查看更多。
+## 二、Net framework \ Volley
+关于更多 volley 的介绍和使用方法，请移步至本人的另一 repo：[MyVolley：Volley 的使用及其工具类的封装][1] 查看更多。
 ### 1. VolleyRequestUtil
-**用GET方式请求网络资源：**
+- **用 GET 方式请求网络资源：**
 
         VolleyRequestUtil.RequestGet(this, url, "tag", 
             new VolleyListenerInterface(this, VolleyListenerInterface.mListener,
@@ -25,7 +25,7 @@ BaseActivity、BaseFragment、BaseAdapter
             }
         });
         
-**用POST方式请求网络资源：**
+- **用 POST 方式请求网络资源：**
 
         VolleyRequestUtil.RequestPOST(this, url, "tag", 
             new VolleyListenerInterface(this, VolleyListenerInterface.mListener,
@@ -44,7 +44,7 @@ BaseActivity、BaseFragment、BaseAdapter
         });
 
 ### 2. PostUploadRequest
-用于上传文件的框架，封装于Volley。
+用于上传文件的框架，封装于 Volley。
 
        /**
          * 上传文件分两步：
@@ -136,7 +136,14 @@ BaseActivity、BaseFragment、BaseAdapter
 |compile 'liji.library.dev:citypickerview:0.9.0'|省市区三级联动|
 |compile 'cn.finalteam.rxgalleryfinal:library:0.0.3'|图片/视频文件选择器|
 
-> 本人会坚持在这个项目上实践最新的技术，逐渐完善，让它越来越完美！ Ps：本项目中使用的许多好用的轮子均根据网上各位大牛的开源项目参考和修改而来，首先向各位致谢，如果有什么使用不当的地方，请联系我。您在使用过程中，发现 bug 或有好的建议欢迎issue、email(lishidezy@gmail.com)，如果感觉对你有帮助也欢迎点个 star，留下点印记吧。
+## 六、Material Design
+
+|widget|描述|
+|---|---|
+|android.support.v7.widget.Toolbar|Toolbar|
+|android.support.design.widget.TabLayout|TabLayout|
+
+**本人会坚持在这个项目上实践最新的技术，逐渐完善，让它越来越完美！ Ps：本项目中使用的许多好用的轮子均根据网上各位大牛的开源项目参考和修改而来，首先向各位致谢，如果有什么使用不当的地方，请联系我。您在使用过程中，发现 bug 或有好的建议欢迎 issue 、email (lishidezy@gmail.com)，如果感觉对你有帮助也欢迎点个 star，留下点印记吧。**
 
 
 
