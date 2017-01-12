@@ -18,5 +18,6 @@
     <string name="text_open">打开</string>
     <string name="text_single">单选</string>
     <string name="text_multi">多选</string>
+    <string name="text_tab_lay">TabLayout 示例</string>
 
 </resources>

@@ -15,6 +15,7 @@ import com.example.dev.activity.CityPickerActivity;
 import com.example.dev.activity.CoverFlowDemoActivity;
 import com.example.dev.activity.GalleryActivity;
 import com.example.dev.activity.LikeIosDialogActivity;
+import com.example.dev.activity.TabLayDemoActivity;
 import com.example.dev.activity.TextDemoActivity;
 import com.example.dev.adapter.MainWidgetAdapter;
 import com.example.dev.listener.OnItemClickListener;
@@ -80,6 +81,10 @@ public class HomeFragment extends BaseFragment {
                         bundle.putString("title", getString(R.string.text_gallery));
                         readyGo(GalleryActivity.class, bundle);
                         break;
+                    case 5:
+                        bundle.putString("title", getString(R.string.text_tab_lay));
+                        readyGo(TabLayDemoActivity.class, bundle);
+                        break;
                 }
             }
         });
@@ -87,7 +92,7 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     protected void initLogic(View view) {
-      setCenterTitle(R.string.tab1);
+        setCenterTitle(R.string.tab1);
     }
 
     @Override

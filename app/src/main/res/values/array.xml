@@ -6,6 +6,7 @@
         <item>仿iOS的Dialog</item>
         <item>省市区三级联动</item>
         <item>图片/视频文件选择器</item>
+        <item>TabLayout 示例</item>
     </string-array>
 
     <string-array name="main_item_des">
@@ -14,5 +15,6 @@
         <item>仿iOS的Dialog示例</item>
         <item>CityPicker 高仿iOS 滚轮实现 省市区 城市选择三级联动</item>
         <item>支持多选、单选、拍摄和裁剪，主题可自定义，无强制绑定第三方图片加载器。</item>
+        <item>Material Design 之 TabLayout 使用</item>
     </string-array>
 </resources>

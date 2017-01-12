@@ -58,6 +58,7 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".activity.CityPickerActivity"/>
         <activity android:name=".activity.GalleryActivity"/>
+        <activity android:name=".activity.TabLayDemoActivity"/>
     </application>
 
 </manifest>
