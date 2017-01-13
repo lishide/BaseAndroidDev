@@ -135,6 +135,7 @@ BaseActivity、BaseFragment、BaseAdapter
 |compile 'com.yanzhenjie:recyclerview-swipe:1.0.2'|SwipeRecyclerView--RecyclerView侧滑菜单，长按拖拽，滑动删除，加载更多下拉刷新等|
 |compile 'liji.library.dev:citypickerview:0.9.0'|省市区三级联动|
 |compile 'cn.finalteam.rxgalleryfinal:library:0.0.3'|图片/视频文件选择器|
+|compile 'me.drakeet.materialdialog:library:1.3.1'|Material Design 风格的自定义Dialog|
 
 ## 六、Material Design
 

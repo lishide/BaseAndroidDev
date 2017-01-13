@@ -19,5 +19,6 @@
     <string name="text_single">单选</string>
     <string name="text_multi">多选</string>
     <string name="text_tab_lay">TabLayout 示例</string>
+    <string name="txt_m_dlg">Material Dialog 示例</string>
 
 </resources>

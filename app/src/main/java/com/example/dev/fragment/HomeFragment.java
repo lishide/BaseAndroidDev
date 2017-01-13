@@ -15,6 +15,7 @@ import com.example.dev.activity.CityPickerActivity;
 import com.example.dev.activity.CoverFlowDemoActivity;
 import com.example.dev.activity.GalleryActivity;
 import com.example.dev.activity.LikeIosDialogActivity;
+import com.example.dev.activity.MaterialDialogActivity;
 import com.example.dev.activity.TabLayDemoActivity;
 import com.example.dev.activity.TextDemoActivity;
 import com.example.dev.adapter.MainWidgetAdapter;
@@ -84,6 +85,10 @@ public class HomeFragment extends BaseFragment {
                     case 5:
                         bundle.putString("title", getString(R.string.text_tab_lay));
                         readyGo(TabLayDemoActivity.class, bundle);
+                        break;
+                    case 6:
+                        bundle.putString("title", getString(R.string.txt_m_dlg));
+                        readyGo(MaterialDialogActivity.class, bundle);
                         break;
                 }
             }

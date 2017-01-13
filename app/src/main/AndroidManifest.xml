@@ -59,6 +59,7 @@
         <activity android:name=".activity.CityPickerActivity"/>
         <activity android:name=".activity.GalleryActivity"/>
         <activity android:name=".activity.TabLayDemoActivity"/>
+        <activity android:name=".activity.MaterialDialogActivity"/>
     </application>
 
 </manifest>
