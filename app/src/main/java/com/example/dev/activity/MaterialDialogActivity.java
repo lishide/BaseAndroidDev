@@ -168,7 +168,7 @@ public class MaterialDialogActivity extends BaseActivity {
                 float scale2 = getResources().getDisplayMetrics().density;
                 int dpAsPixels2 = (int) (8 * scale2 + 0.5f);
                 lvBase.setPadding(0, dpAsPixels2, 0, dpAsPixels2);
-                lvBase.setDividerHeight(0);
+                lvBase.setDividerHeight(1);
                 lvBase.setAdapter(listAdapter);
 
                 final MaterialDialog alertList2 = new MaterialDialog(context).setTitle(

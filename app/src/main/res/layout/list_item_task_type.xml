@@ -11,5 +11,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:paddingLeft="@dimen/item_margin"
+        android:paddingRight="@dimen/item_margin"
         android:textAppearance="?android:attr/textAppearanceListItemSmall"/>
 </LinearLayout>
