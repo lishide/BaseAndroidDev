@@ -151,8 +151,9 @@ BaseActivity、BaseFragment、BaseAdapter
 |android.support.design.widget.FloatingActionButton|FloatingActionButton：浮动按钮|
 |Snackbar.make(view, "", Snackbar.LENGTH_SHORT).show();|Snackbar：消息的提示和动作反馈|
 
-**本人会坚持在这个项目上实践最新的技术，逐渐完善，让它越来越完美！ Ps：本项目中使用的许多好用的轮子均根据网上各位大牛的开源项目参考和修改而来，首先向各位致谢，如果有什么使用不当的地方，请联系我。您在使用过程中，发现 bug 或有好的建议欢迎 issue 、email (lishidezy@gmail.com)，如果感觉对你有帮助也欢迎点个 star，留下点印记吧。**
+**本人会坚持在这个项目上实践最新的技术，逐渐完善，让它越来越完美！ Ps：本项目中使用的许多好用的轮子均根据网上各位大牛的开源项目参考和修改而来，首先向各位致谢，如果有什么使用不当的地方，请联系我。代码开源在 GitHub：[BaseAndroidDev][2]，您在使用过程中，发现 bug 或有好的建议欢迎 issue 、email (lishidezy@gmail.com)，如果感觉对你有帮助也欢迎点个 star，留下点印记吧。**
 
 
 
   [1]: https://github.com/lishide/MyVolley
+  [2]: https://github.com/lishide/BaseAndroidDev
