@@ -10,6 +10,13 @@
         <item name="android:clipToPadding">true</item>
         <item name="android:fitsSystemWindows">true</item>
     </style>
+
+    <style name="MDTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
     <!--图片选择器界面使用主题1-->
     <style name="Theme_Light" parent="Theme.AppCompat.Light.NoActionBar">
         <!--<item name="gallery_ucrop_title_text">@string/gallery_ucrop_menu_crop</item>-->

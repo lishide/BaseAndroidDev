@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.base.adev.fragment.BaseFragment;
 import com.example.dev.R;
+import com.example.dev.activity.AppbarLayActivity;
 import com.example.dev.activity.CityPickerActivity;
 import com.example.dev.activity.CoverFlowDemoActivity;
 import com.example.dev.activity.GalleryActivity;
@@ -89,6 +90,10 @@ public class HomeFragment extends BaseFragment {
                     case 6:
                         bundle.putString("title", getString(R.string.txt_m_dlg));
                         readyGo(MaterialDialogActivity.class, bundle);
+                        break;
+                    case 7:
+                        bundle.putString("title", getString(R.string.txt_md_appbar_lay));
+                        readyGo(AppbarLayActivity.class, bundle);
                         break;
                 }
             }

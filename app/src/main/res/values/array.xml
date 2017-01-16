@@ -8,6 +8,7 @@
         <item>图片/视频文件选择器</item>
         <item>TabLayout 示例</item>
         <item>Material Dialog 示例</item>
+        <item>新控件使用示例</item>
     </string-array>
 
     <string-array name="main_item_des">
@@ -18,5 +19,6 @@
         <item>支持多选、单选、拍摄和裁剪，主题可自定义，无强制绑定第三方图片加载器。</item>
         <item>Material Design 之 TabLayout 使用</item>
         <item>Material Design 风格的自定义Dialog，GitHub地址：https://github.com/drakeet/MaterialDialog</item>
+        <item>CoordinatorLayout、CollapsingToolbarLayout、NestedScrollView、FloatingActionButton 等新控件的使用</item>
     </string-array>
 </resources>

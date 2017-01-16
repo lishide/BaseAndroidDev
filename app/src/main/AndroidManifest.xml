@@ -10,7 +10,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
      
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
-    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CAMERA"/>
 
     <!--声明使用相机-->
     <uses-feature
@@ -60,6 +60,10 @@
         <activity android:name=".activity.GalleryActivity"/>
         <activity android:name=".activity.TabLayDemoActivity"/>
         <activity android:name=".activity.MaterialDialogActivity"/>
+        <activity
+            android:name=".activity.AppbarLayActivity"
+            android:theme="@style/MDTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
     </application>
 
 </manifest>
