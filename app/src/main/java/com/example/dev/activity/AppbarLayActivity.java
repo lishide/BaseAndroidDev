@@ -45,12 +45,19 @@ public class AppbarLayActivity extends BaseActivity {
         AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.appbar_layout);
 
         final CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapse_layout);
-        collapsingToolbarLayout.setTitle("");
+        collapsingToolbarLayout.setTitle(title);
         collapsingToolbarLayout.setCollapsedTitleTextColor(Color.WHITE);
         collapsingToolbarLayout.setExpandedTitleColor(Color.WHITE);
-        collapsingToolbarLayout.setExpandedTitleColor(Color.TRANSPARENT);
 
-        appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+        /**
+         * AppBarLayout 的大小改变事件监听
+         * 如下代码实现在 CollapsingToolbarLayout 完全收起时才显示标题
+         *
+         * 可不用实现，即当 CollapsingToolbarLayout 全屏没有折叠时，
+         * title 显示的是大字体，在折叠的过程中，title 不断变小到一定大小的效果。
+         * 根据需求合理调整
+         */
+        /*appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
                 Log.e(TAG, "appbarHeight:" + appBarLayout.getHeight()
@@ -63,7 +70,7 @@ public class AppbarLayActivity extends BaseActivity {
                     collapsingToolbarLayout.setTitle("");
                 }
             }
-        });
+        });*/
 
         fab1 = (FloatingActionButton) findViewById(R.id.fab1);
         fab2 = (FloatingActionButton) findViewById(R.id.fab2);
