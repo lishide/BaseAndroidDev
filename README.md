@@ -122,6 +122,7 @@ BaseActivity、BaseFragment、BaseAdapter
 |SystemBarTintManager|沉浸状态栏使用|
 |MyGlideLoadUtil|Glide加载图片工具类|
 |MyBitmapImageViewTarget|Glide加载图片设置合适ScaleType的工具类|
+|StatusBarUtils|状态栏设置工具类|
 
 ## 五、用到的开源库
 
@@ -143,6 +144,12 @@ BaseActivity、BaseFragment、BaseAdapter
 |---|---|
 |android.support.v7.widget.Toolbar|Toolbar|
 |android.support.design.widget.TabLayout|TabLayout|
+|android.support.design.widget.CoordinatorLayout|CoordinatorLayout|
+|android.support.design.widget.AppBarLayout|AppBarLayout|
+|android.support.design.widget.CollapsingToolbarLayout|CollapsingToolbarLayout|
+|android.support.v4.widget.NestedScrollView|NestedScrollView|
+|android.support.design.widget.FloatingActionButton|FloatingActionButton：浮动按钮|
+|Snackbar.make(view, "", Snackbar.LENGTH_SHORT).show();|Snackbar：消息的提示和动作反馈|
 
 **本人会坚持在这个项目上实践最新的技术，逐渐完善，让它越来越完美！ Ps：本项目中使用的许多好用的轮子均根据网上各位大牛的开源项目参考和修改而来，首先向各位致谢，如果有什么使用不当的地方，请联系我。您在使用过程中，发现 bug 或有好的建议欢迎 issue 、email (lishidezy@gmail.com)，如果感觉对你有帮助也欢迎点个 star，留下点印记吧。**
 
