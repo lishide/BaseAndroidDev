@@ -6,7 +6,7 @@ import com.base.adev.activity.BaseTabBottomActivity;
 import com.example.dev.R;
 import com.example.dev.fragment.DemoFragment;
 import com.example.dev.fragment.HomeFragment;
-import com.example.dev.fragment.Demo2Fragment;
+import com.example.dev.fragment.MeFragment;
 
 public class MainActivity extends BaseTabBottomActivity {
 
@@ -16,7 +16,7 @@ public class MainActivity extends BaseTabBottomActivity {
 
         addFragment(new HomeFragment(), R.string.tab1, R.mipmap.ic_launcher);
         addFragment(new DemoFragment(), R.string.tab2, R.mipmap.ic_launcher);
-        addFragment(new Demo2Fragment(), R.string.tab3, R.mipmap.ic_launcher);
+        addFragment(new MeFragment(), R.string.tab_me, R.mipmap.ic_launcher);
 
         initialise();
     }

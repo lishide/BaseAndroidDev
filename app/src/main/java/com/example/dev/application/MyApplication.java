@@ -105,7 +105,7 @@ public class MyApplication extends BaseApplication {
             CharSequence timestamp = DateFormat.format("yyyyMMdd_HHmmss_", System.currentTimeMillis()) + "" + (System.currentTimeMillis() % 1000);
 
             try {
-                String filename = Environment.getExternalStorageDirectory().getPath() + File.separator + "MirrorClient" + File.separator
+                String filename = Environment.getExternalStorageDirectory().getPath() + File.separator + "BaseDevEg" + File.separator
                         + "Log" + File.separator;
                 File dirFile = new File(filename);
                 if (!dirFile.exists()) {
