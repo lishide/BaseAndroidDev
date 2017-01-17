@@ -123,6 +123,8 @@ BaseActivity、BaseFragment、BaseAdapter
 |MyGlideLoadUtil|Glide加载图片工具类|
 |MyBitmapImageViewTarget|Glide加载图片设置合适ScaleType的工具类|
 |StatusBarUtils|状态栏设置工具类|
+|GetFolderSizeManager|获取文件夹大小|
+|DataCleanManager|本应用数据清除管理器|
 
 ## 五、用到的开源库
 
