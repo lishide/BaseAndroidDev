@@ -25,7 +25,9 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <meta-data
+            android:name="com.example.dev.utils.MyGlideModule"
+            android:value="GlideModule"/>
         <!--以下两个activity的声明用来打开图片选择器界面-->
         <activity
             android:name="cn.finalteam.rxgalleryfinal.ui.activity.MediaActivity"
