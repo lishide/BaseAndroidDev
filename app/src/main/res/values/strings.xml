@@ -22,6 +22,7 @@
     <string name="txt_m_dlg">Material Dialog 示例</string>
     <string name="txt_md_appbar_lay">新控件使用示例</string>
     <string name="txt_setting">设置</string>
+    <string name="txt_swipe_recycler">RecyclerView-Refresh+LoadMore</string>
 
     <string name="large_text">
         "Material is the metaphor.\n\n"

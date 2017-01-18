@@ -17,6 +17,7 @@ import com.example.dev.activity.CoverFlowDemoActivity;
 import com.example.dev.activity.GalleryActivity;
 import com.example.dev.activity.LikeIosDialogActivity;
 import com.example.dev.activity.MaterialDialogActivity;
+import com.example.dev.activity.SwipeRVDemoActivity;
 import com.example.dev.activity.TabLayDemoActivity;
 import com.example.dev.activity.TextDemoActivity;
 import com.example.dev.adapter.MainWidgetAdapter;
@@ -94,6 +95,10 @@ public class HomeFragment extends BaseFragment {
                     case 7:
                         bundle.putString("title", getString(R.string.txt_md_appbar_lay));
                         readyGo(AppbarLayActivity.class, bundle);
+                        break;
+                    case 8:
+                        bundle.putString("title", getString(R.string.txt_swipe_recycler));
+                        readyGo(SwipeRVDemoActivity.class, bundle);
                         break;
                 }
             }

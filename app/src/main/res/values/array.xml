@@ -9,6 +9,7 @@
         <item>TabLayout 示例</item>
         <item>Material Dialog 示例</item>
         <item>新控件使用示例</item>
+        <item>RecyclerView（侧滑菜单和Refresh、LoadMore嵌套）</item>
     </string-array>
 
     <string-array name="main_item_des">
@@ -20,5 +21,6 @@
         <item>Material Design 之 TabLayout 使用</item>
         <item>Material Design 风格的自定义Dialog，GitHub地址：https://github.com/drakeet/MaterialDialog</item>
         <item>CoordinatorLayout、CollapsingToolbarLayout、NestedScrollView、FloatingActionButton 等新控件的使用</item>
+        <item>RecyclerView（侧滑菜单和下拉刷新、上拉加载嵌套）</item>
     </string-array>
 </resources>

@@ -67,6 +67,7 @@
             android:theme="@style/MDTheme"
             android:windowSoftInputMode="stateAlwaysHidden"/>
         <activity android:name=".activity.SettingActivity"/>
+        <activity android:name=".activity.SwipeRVDemoActivity"/>
     </application>
 
 </manifest>
