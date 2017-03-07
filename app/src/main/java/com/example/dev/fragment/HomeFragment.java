@@ -20,6 +20,7 @@ import com.example.dev.activity.MaterialDialogActivity;
 import com.example.dev.activity.SwipeRVDemoActivity;
 import com.example.dev.activity.TabLayDemoActivity;
 import com.example.dev.activity.TextDemoActivity;
+import com.example.dev.activity.BMImgClickActivity;
 import com.example.dev.adapter.MainWidgetAdapter;
 import com.example.dev.bean.ListItemInfo;
 import com.example.dev.listener.OnItemClickListener;
@@ -104,6 +105,10 @@ public class HomeFragment extends BaseFragment {
                     bundle.putString("title", getString(R.string.txt_swipe_recycler));
                     readyGo(SwipeRVDemoActivity.class, bundle);
                     break;
+                case 9:
+                    bundle.putString("title", getString(R.string.txt_bm_photo));
+                    readyGo(BMImgClickActivity.class, bundle);
+                   break;
             }
         }
     };

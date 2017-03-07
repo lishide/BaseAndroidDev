@@ -10,6 +10,7 @@
         <item>Material Dialog 示例</item>
         <item>新控件使用示例</item>
         <item>RecyclerView（侧滑菜单和Refresh、LoadMore嵌套）</item>
+        <item>图片浏览缩放控件</item>
     </string-array>
 
     <string-array name="main_item_des">
@@ -22,5 +23,6 @@
         <item>Material Design 风格的自定义Dialog，GitHub地址：https://github.com/drakeet/MaterialDialog</item>
         <item>CoordinatorLayout、CollapsingToolbarLayout、NestedScrollView、FloatingActionButton 等新控件的使用</item>
         <item>RecyclerView（侧滑菜单和下拉刷新、上拉加载嵌套）</item>
+        <item>支持图片点击放大缩小浏览功能，单张多张图片预览，更多使用参考原作示例。GitHub地址：https://github.com/bm-x/PhotoView。</item>
     </string-array>
 </resources>
