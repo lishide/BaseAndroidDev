@@ -43,7 +43,7 @@ public class CityPickerActivity extends BaseActivity {
                         .title("选择地区")
                         .titleTextColor("#ffffff")
                         .backgroundPop(0xa0000000)
-                        .titleBackgroundColor("#0381F4")
+                        .titleBackgroundColor("#3F51B5")
                         .confirTextColor("#ffffff")
                         .cancelTextColor("#ffffff")
                         .province(defProvinceName)
