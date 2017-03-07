@@ -50,6 +50,9 @@ BaseActivity、BaseFragment、BaseAdapter
 |compile 'liji.library.dev:citypickerview:0.9.0'|省市区三级联动|
 |compile 'cn.finalteam.rxgalleryfinal:library:0.0.3'|图片/视频文件选择器|
 |compile 'me.drakeet.materialdialog:library:1.3.1'|Material Design 风格的自定义Dialog|
+|compile 'com.bm.photoview:library:1.4.1'|图片浏览缩放控件|
+|compile 'com.bigkoo:convenientbanner:2.0.5'|Banner-广告栏控件|
+|compile 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:1.2.32@aar'|各种翻页效果|
 
 ## 六、Material Design
 

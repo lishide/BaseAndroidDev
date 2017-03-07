@@ -69,6 +69,7 @@
         <activity android:name=".activity.SettingActivity"/>
         <activity android:name=".activity.SwipeRVDemoActivity"/>
         <activity android:name=".activity.BMImgClickActivity"/>
+        <activity android:name=".activity.CBannerActivity"/>
     </application>
 
 </manifest>

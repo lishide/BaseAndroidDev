@@ -24,6 +24,7 @@
     <string name="txt_setting">设置</string>
     <string name="txt_swipe_recycler">RecyclerView-Refresh+LoadMore</string>
     <string name="txt_bm_photo">图片浏览缩放控件</string>
+    <string name="txt_c_banner">Banner-广告栏控件</string>
 
     <string name="large_text">
         "Material is the metaphor.\n\n"

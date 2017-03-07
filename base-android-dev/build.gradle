@@ -51,4 +51,7 @@ dependencies {
     compile 'com.bigkoo:svprogresshud:1.0.6'
     //图片浏览缩放控件
     compile 'com.bm.photoview:library:1.4.1'
+    //banner
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+    compile 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:1.2.32@aar'
 }

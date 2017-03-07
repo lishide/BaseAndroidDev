@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import com.base.adev.fragment.BaseFragment;
 import com.example.dev.R;
 import com.example.dev.activity.AppbarLayActivity;
+import com.example.dev.activity.BMImgClickActivity;
+import com.example.dev.activity.CBannerActivity;
 import com.example.dev.activity.CityPickerActivity;
 import com.example.dev.activity.CoverFlowDemoActivity;
 import com.example.dev.activity.GalleryActivity;
@@ -20,7 +22,6 @@ import com.example.dev.activity.MaterialDialogActivity;
 import com.example.dev.activity.SwipeRVDemoActivity;
 import com.example.dev.activity.TabLayDemoActivity;
 import com.example.dev.activity.TextDemoActivity;
-import com.example.dev.activity.BMImgClickActivity;
 import com.example.dev.adapter.MainWidgetAdapter;
 import com.example.dev.bean.ListItemInfo;
 import com.example.dev.listener.OnItemClickListener;
@@ -108,7 +109,11 @@ public class HomeFragment extends BaseFragment {
                 case 9:
                     bundle.putString("title", getString(R.string.txt_bm_photo));
                     readyGo(BMImgClickActivity.class, bundle);
-                   break;
+                    break;
+                case 10:
+                    bundle.putString("title", getString(R.string.txt_c_banner));
+                    readyGo(CBannerActivity.class, bundle);
+                    break;
             }
         }
     };
