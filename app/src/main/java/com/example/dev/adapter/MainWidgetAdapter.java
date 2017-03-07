@@ -7,30 +7,25 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.dev.R;
+import com.example.dev.bean.ListItemInfo;
 import com.example.dev.listener.OnItemClickListener;
 
 import java.util.List;
 
 public class MainWidgetAdapter extends RecyclerView.Adapter<MainWidgetAdapter.DefaultViewHolder> {
 
-    private List<String> titles;
-
-    private List<String> descriptions;
+    private List<ListItemInfo> mData;
 
     private OnItemClickListener mOnItemClickListener;
 
-    public MainWidgetAdapter(List<String> titles, List<String> descriptions) {
-        this.titles = titles;
-        this.descriptions = descriptions;
-    }
-
-    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+    public MainWidgetAdapter(List<ListItemInfo> data, OnItemClickListener onItemClickListener) {
+        this.mData = data;
         this.mOnItemClickListener = onItemClickListener;
     }
 
     @Override
     public int getItemCount() {
-        return titles == null ? 0 : titles.size();
+        return mData == null ? 0 : mData.size();
     }
 
     @Override
@@ -41,11 +36,11 @@ public class MainWidgetAdapter extends RecyclerView.Adapter<MainWidgetAdapter.De
 
     @Override
     public void onBindViewHolder(DefaultViewHolder holder, int position) {
-        holder.setData(titles.get(position), descriptions.get(position));
+        holder.setData(mData.get(position));
         holder.setOnItemClickListener(mOnItemClickListener);
     }
 
-    static class DefaultViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    class DefaultViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView tvTitle;
         TextView tvDescription;
         OnItemClickListener mOnItemClickListener;
@@ -61,9 +56,9 @@ public class MainWidgetAdapter extends RecyclerView.Adapter<MainWidgetAdapter.De
             this.mOnItemClickListener = onItemClickListener;
         }
 
-        public void setData(String title, String des) {
-            this.tvTitle.setText(title);
-            this.tvDescription.setText(des);
+        public void setData(ListItemInfo listItemInfo) {
+            this.tvTitle.setText(listItemInfo.getTitle());
+            this.tvDescription.setText(listItemInfo.getSubTitle());
         }
 
         @Override
