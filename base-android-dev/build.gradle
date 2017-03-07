@@ -29,8 +29,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:support-v4:25.2.0'
     compile 'com.android.support:design:25.2.0'
-
-    compile 'com.mcxiaoke.volley:library:1.0.19'
+    // Volley网络请求框架
+    //compile 'com.mcxiaoke.volley:library:1.0.19'
 
     compile 'com.google.code.gson:gson:2.7'
     //BottomNavigation

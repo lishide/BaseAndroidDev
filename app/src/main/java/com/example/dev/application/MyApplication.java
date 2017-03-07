@@ -7,8 +7,6 @@ import android.os.Environment;
 import android.text.format.DateFormat;
 import android.util.Log;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.Volley;
 import com.base.adev.application.BaseApplication;
 import com.bigkoo.svprogresshud.SVProgressHUD;
 import com.example.dev.R;
@@ -28,7 +26,6 @@ public class MyApplication extends BaseApplication {
     public static Context context;
     private static final String TAG = "MyApplication";
 
-    public static RequestQueue queue;
     private static SVProgressHUD mSVProgressHUD;
 
 
@@ -43,7 +40,6 @@ public class MyApplication extends BaseApplication {
             instance = this;
         }
         context = getApplicationContext();
-        queue = Volley.newRequestQueue(getApplicationContext());
 
         UEHandler ueHandler = new UEHandler();
         Thread.setDefaultUncaughtExceptionHandler(ueHandler);
@@ -58,10 +54,6 @@ public class MyApplication extends BaseApplication {
         if (mSVProgressHUD.isShowing()) {
             mSVProgressHUD.dismiss();
         }
-    }
-
-    public static RequestQueue getQueue() {
-        return queue;
     }
 
     private class UEHandler implements UncaughtExceptionHandler {

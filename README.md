@@ -4,8 +4,15 @@
 ##一、Base
 BaseActivity、BaseFragment、BaseAdapter
 
-## 二、Net framework \ Volley
+## 二、Net framework
+
+#### 1. Volley
 关于更多 volley 的介绍和使用方法，请移步至本人的另一 repo：[MyVolley：Volley 的使用及其工具类的封装][1] 查看更多。
+（本人已放弃使用，仍然可用。不过强烈推荐使用 **2. NoHttp** ！！！）
+
+#### 2. NoHttp
+NoHttp —— 一个有情怀的网络框架 ，让你的网络请求更简单。
+基于 NoHttp 的封装：[NoHttpConnecter][3]
 
 ## 三、自定义控件
 收集整理一些实用的自定义控件，会持续更新。
@@ -73,3 +80,4 @@ BaseActivity、BaseFragment、BaseAdapter
 
   [1]: https://github.com/lishide/MyVolley
   [2]: https://github.com/lishide/BaseAndroidDev
+  [3]: https://github.com/lishide/NoHttpConnecter
