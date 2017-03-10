@@ -22,6 +22,7 @@ import com.example.dev.activity.MaterialDialogActivity;
 import com.example.dev.activity.SwipeRVDemoActivity;
 import com.example.dev.activity.TabLayDemoActivity;
 import com.example.dev.activity.TextDemoActivity;
+import com.example.dev.activity.TextInputLayActivity;
 import com.example.dev.adapter.MainWidgetAdapter;
 import com.example.dev.bean.ListItemInfo;
 import com.example.dev.listener.OnItemClickListener;
@@ -113,6 +114,10 @@ public class HomeFragment extends BaseFragment {
                 case 10:
                     bundle.putString("title", getString(R.string.txt_c_banner));
                     readyGo(CBannerActivity.class, bundle);
+                    break;
+                case 11:
+                    bundle.putString("title", getString(R.string.txt_text_input));
+                    readyGo(TextInputLayActivity.class, bundle);
                     break;
             }
         }

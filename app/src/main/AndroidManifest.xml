@@ -12,13 +12,13 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
     <uses-permission android:name="android.permission.CAMERA"/>
 
-    <!--声明使用相机-->
+    <!-- 声明使用相机 -->
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true"/>
 
     <application
-        android:name="com.example.dev.application.MyApplication"
+        android:name=".application.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_logo_a_collect"
         android:label="@string/app_name"
@@ -28,7 +28,7 @@
         <meta-data
             android:name="com.example.dev.utils.MyGlideModule"
             android:value="GlideModule"/>
-        <!--以下两个activity的声明用来打开图片选择器界面-->
+        <!-- 以下两个activity的声明用来打开图片选择器界面 -->
         <activity
             android:name="cn.finalteam.rxgalleryfinal.ui.activity.MediaActivity"
             android:exported="true"
@@ -38,7 +38,6 @@
             android:name="com.yalantis.ucrop.UCropActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme_Light.Default"/>
-
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -46,9 +45,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
         <activity android:name=".activity.BlankActivity"/>
-
         <activity
             android:name=".activity.TextDemoActivity"
             android:screenOrientation="portrait"/>
@@ -70,6 +67,9 @@
         <activity android:name=".activity.SwipeRVDemoActivity"/>
         <activity android:name=".activity.BMImgClickActivity"/>
         <activity android:name=".activity.CBannerActivity"/>
+        <activity
+            android:name=".activity.TextInputLayActivity"
+            android:theme="@style/MDTheme"/>
     </application>
 
 </manifest>

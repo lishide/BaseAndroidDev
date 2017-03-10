@@ -12,6 +12,7 @@
         <item>RecyclerView（侧滑菜单和Refresh、LoadMore嵌套）</item>
         <item>图片浏览缩放控件</item>
         <item>Banner-广告栏控件</item>
+        <item>TextInputLayout</item>
     </string-array>
 
     <string-array name="main_item_des">
@@ -26,5 +27,6 @@
         <item>RecyclerView（侧滑菜单和下拉刷新、上拉加载嵌套）</item>
         <item>支持图片点击放大缩小浏览功能，单张多张图片预览，更多使用参考原作示例。GitHub地址：https://github.com/bm-x/PhotoView。</item>
         <item>通用的广告栏控件，让你轻松实现广告头效果。支持无限循环，可以设置自动翻页和时间，并且提供多种翻页特效。</item>
+        <item>TextInputLayout：登录、注册等页面信息验证</item>
     </string-array>
 </resources>
