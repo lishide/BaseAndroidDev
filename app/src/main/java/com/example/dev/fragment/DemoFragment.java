@@ -13,8 +13,9 @@ public class DemoFragment extends BaseFragment {
     private static final String TAG = "DemoFragment";
 
     @Override
-    protected View initContentView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fg_demo, container, false);
+    protected View initContentView(LayoutInflater inflater, @Nullable ViewGroup container,
+                                   @Nullable Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.fg_demo, container, false);
         return view;
     }
 
@@ -24,7 +25,7 @@ public class DemoFragment extends BaseFragment {
     }
 
     @Override
-    protected void initLogic(View view) {
+    protected void initLogic() {
 
     }
 

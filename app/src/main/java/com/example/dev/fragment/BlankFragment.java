@@ -10,11 +10,12 @@ import com.base.adev.fragment.BaseFragment;
 import com.example.dev.R;
 
 public class BlankFragment extends BaseFragment {
-    private static final String TAG = "DemoFragment";
+    private static final String TAG = "BlankFragment";
 
     @Override
-    protected View initContentView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_blank, container, false);
+    protected View initContentView(LayoutInflater inflater, @Nullable ViewGroup container,
+                                   @Nullable Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.fragment_blank, container, false);
         return view;
     }
 
@@ -24,7 +25,7 @@ public class BlankFragment extends BaseFragment {
     }
 
     @Override
-    protected void initLogic(View view) {
+    protected void initLogic() {
 
     }
 

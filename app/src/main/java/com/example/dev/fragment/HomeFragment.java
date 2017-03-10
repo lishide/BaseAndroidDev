@@ -44,7 +44,7 @@ public class HomeFragment extends BaseFragment {
     @Override
     protected View initContentView(LayoutInflater inflater, @Nullable ViewGroup container,
                                    @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fg_home, container, false);
+        view = inflater.inflate(R.layout.fg_home, container, false);
         return view;
     }
 
@@ -124,7 +124,7 @@ public class HomeFragment extends BaseFragment {
     };
 
     @Override
-    protected void initLogic(View view) {
+    protected void initLogic() {
         setCenterTitle(R.string.tab1);
     }
 

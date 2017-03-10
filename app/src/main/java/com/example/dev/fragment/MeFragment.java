@@ -24,7 +24,7 @@ public class MeFragment extends BaseFragment implements View.OnClickListener {
     @Override
     protected View initContentView(LayoutInflater inflater, @Nullable ViewGroup container,
                                    @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_me, container, false);
+        view = inflater.inflate(R.layout.fragment_me, container, false);
         return view;
     }
 
@@ -37,7 +37,7 @@ public class MeFragment extends BaseFragment implements View.OnClickListener {
     }
 
     @Override
-    protected void initLogic(View view) {
+    protected void initLogic() {
         setCenterTitle(R.string.tab_me);
         tvMeSetting.setOnClickListener(this);
         MyGlideLoadUtil.loadCache(context, R.drawable.img_wk, civUserHead);

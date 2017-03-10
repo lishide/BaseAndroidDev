@@ -6,7 +6,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,10 +16,12 @@ import com.base.adev.utils.ToastUtils;
 
 public abstract class BaseFragment extends Fragment {
     private static final String TAG = "BaseFragment";
-    protected View rootView;
 
     public Toolbar mToolbar;
     public TextView mTvCenterTitle;
+    public View view;
+    //控件是否已经初始化
+    private boolean isCreateView = false;
 
     public BaseFragment() { /* compiled code */ }
 
@@ -35,28 +36,40 @@ public abstract class BaseFragment extends Fragment {
         if (null != getArguments()) {
             getBundleExtras(getArguments());
         }
-        View view = initContentView(inflater, container, savedInstanceState);
+
+        if (null != view) {
+            ViewGroup parent = (ViewGroup) view.getParent();
+            if (null != parent) {
+                parent.removeView(view);
+            }
+        } else {
+            view = initContentView(inflater, container, savedInstanceState);
+        }
+
         mToolbar = (Toolbar) view.findViewById(R.id.toolbar);
 
         initTitle(view);
 
         initView(view);
-        initLogic(view);
+        isCreateView = true;
         return view;
     }
 
-    protected View createFragmentView(LayoutInflater inflater, @Nullable ViewGroup container, int resId) {
-        View view = null;
-        if (null != inflater) {
-            view = inflater.inflate(resId, container, false);
+    //此方法在控件初始化前调用，所以不能在此方法中直接操作控件会出现空指针
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if (isVisibleToUser && isCreateView) {
+            initLogic();
         }
+    }
 
-        // TODO
-        if (null == view) {
-            Log.e(TAG, "fragment view is not created！");
-        }
-
-        return view;
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        //第一个fragment会调用
+        if (getUserVisibleHint())
+            initLogic();
     }
 
     // 初始化UI setContentView
@@ -67,7 +80,7 @@ public abstract class BaseFragment extends Fragment {
     protected abstract void initView(View view);
 
     // 逻辑处理
-    protected abstract void initLogic(View view);
+    protected abstract void initLogic();
 
     /**
      * 获取bundle信息

@@ -1,55 +1,34 @@
 package com.example.dev.fragment;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.base.adev.fragment.BaseFragment;
 import com.example.dev.R;
 
-public class TabLayFragment extends Fragment {
-    private Context context;
+public class TabLayFragment extends BaseFragment {
 
-    //控件是否已经初始化
-    private boolean isCreateView = false;
     //是否已经加载过数据
     private boolean isLoadData = false;
-    private View view;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-//        View view = inflater.inflate(R.layout.fragment_video_list, null);
-        if (null != view) {
-            ViewGroup parent = (ViewGroup) view.getParent();
-            if (null != parent) {
-                parent.removeView(view);
-            }
-        } else {
-            view = inflater.inflate(R.layout.fragment_blank, null);
-            initView(view);// 控件初始化
-        }
-
-        isCreateView = true;
+    protected View initContentView(LayoutInflater inflater, @Nullable ViewGroup container,
+                                   @Nullable Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.fragment_blank, container, false);
         return view;
     }
 
-    private void initView(View view) {
-        context = getActivity();
-    }
-
-    //此方法在控件初始化前调用，所以不能在此方法中直接操作控件会出现空指针
     @Override
-    public void setUserVisibleHint(boolean isVisibleToUser) {
-        super.setUserVisibleHint(isVisibleToUser);
-        if (isVisibleToUser && isCreateView) {
-            lazyLoad();
-        }
+    protected void initView(View view) {
+
     }
 
-    private void lazyLoad() {
+    @Override
+    protected void initLogic() {
+
         //如果没有加载过就加载，否则就不再加载了
         if (!isLoadData) {
             //加载数据操作
@@ -59,11 +38,8 @@ public class TabLayFragment extends Fragment {
     }
 
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        //第一个fragment会调用
-        if (getUserVisibleHint())
-            lazyLoad();
+    protected void getBundleExtras(Bundle bundle) {
+
     }
 
     @Override
