@@ -28,6 +28,7 @@
     <string name="txt_text_input">TextInputLayout</string>
     <string name="txt_video_player">GSYVideoPlayer</string>
     <string name="text_open_video">OPEN VIDEO</string>
+    <string name="text_rv_player">普通列表播放，滑出后不持有</string>
 
     <string name="large_text">
         "Material is the metaphor.\n\n"
