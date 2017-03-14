@@ -29,6 +29,7 @@
     <string name="txt_video_player">GSYVideoPlayer</string>
     <string name="text_open_video">OPEN VIDEO</string>
     <string name="text_rv_player">普通列表播放，滑出后不持有</string>
+    <string name="text_rv_player_mini">支持重力旋转的列表播放，滑出后小窗</string>
 
     <string name="large_text">
         "Material is the metaphor.\n\n"

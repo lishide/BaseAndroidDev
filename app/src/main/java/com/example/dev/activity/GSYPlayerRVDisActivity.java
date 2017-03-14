@@ -1,8 +1,11 @@
 package com.example.dev.activity;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.transition.Explode;
+import android.view.Window;
 
 import com.base.adev.activity.BaseActivity;
 import com.example.dev.R;
@@ -27,6 +30,12 @@ public class GSYPlayerRVDisActivity extends BaseActivity {
 
     @Override
     protected void initContentView(Bundle bundle) {
+        // 设置一个exit transition
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
+            getWindow().setEnterTransition(new Explode());
+            getWindow().setExitTransition(new Explode());
+        }
         setContentView(R.layout.activity_gsy_player_rv_dis);
     }
 

@@ -16,6 +16,7 @@ public class GSYVideoActivity extends BaseActivity implements View.OnClickListen
 
     private Button mBtnOpenVideo;
     private Button mBtnRvPlayer;
+    private Button mBtnRvPlayerMini;
 
     @Override
     protected void initContentView(Bundle bundle) {
@@ -26,6 +27,7 @@ public class GSYVideoActivity extends BaseActivity implements View.OnClickListen
     protected void initView() {
         mBtnOpenVideo = (Button) findViewById(R.id.btn_open_video);
         mBtnRvPlayer = (Button) findViewById(R.id.btn_rv_player);
+        mBtnRvPlayerMini = (Button) findViewById(R.id.btn_rv_player_mini);
 
     }
 
@@ -34,6 +36,7 @@ public class GSYVideoActivity extends BaseActivity implements View.OnClickListen
         mToolbar.setTitle(title);
         mBtnOpenVideo.setOnClickListener(this);
         mBtnRvPlayer.setOnClickListener(this);
+        mBtnRvPlayerMini.setOnClickListener(this);
     }
 
     @Override
@@ -44,13 +47,14 @@ public class GSYVideoActivity extends BaseActivity implements View.OnClickListen
     @Override
     public void onClick(View v) {
         Intent intent;
+        ActivityOptionsCompat activityOptions;
         switch (v.getId()) {
             case R.id.btn_open_video:  //直接一个页面播放的
                 intent = new Intent(context, GSYPlayerActivity.class);
                 intent.putExtra(GSYPlayerActivity.TRANSITION, true);
                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
                     Pair pair = new Pair<>(mBtnOpenVideo, GSYPlayerActivity.IMG_TRANSITION);
-                    ActivityOptionsCompat activityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(
+                    activityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(
                             context, pair);
                     ActivityCompat.startActivity(context, intent, activityOptions.toBundle());
                 } else {
@@ -61,7 +65,13 @@ public class GSYVideoActivity extends BaseActivity implements View.OnClickListen
             case R.id.btn_rv_player:  //普通列表播放，只支持全屏，但是不支持屏幕重力旋转，滑出后不持有
                 intent = new Intent(context, GSYPlayerRVDisActivity.class);
                 intent.putExtra("title", getString(R.string.text_rv_player));
-                ActivityOptionsCompat activityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(context);
+                activityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(context);
+                ActivityCompat.startActivity(context, intent, activityOptions.toBundle());
+                break;
+            case R.id.btn_rv_player_mini:  //支持全屏重力旋转的列表播放，滑动后不会被销毁
+                intent = new Intent(context, GSYPlayerRVMiniActivity.class);
+                intent.putExtra("title", getString(R.string.text_rv_player_mini));
+                activityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(context);
                 ActivityCompat.startActivity(context, intent, activityOptions.toBundle());
                 break;
             default:
