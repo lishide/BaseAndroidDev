@@ -70,6 +70,15 @@
         <activity
             android:name=".activity.TextInputLayActivity"
             android:theme="@style/MDTheme"/>
+        <activity
+            android:name=".activity.GSYVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.GSYPlayerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/VideoTheme"/>
     </application>
 
 </manifest>

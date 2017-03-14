@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.2"
     defaultConfig {
 
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -54,4 +54,6 @@ dependencies {
     //banner
     compile 'com.bigkoo:convenientbanner:2.0.5'
     compile 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:1.2.32@aar'
+    //GSYVideoPlayer 视频播放器
+    compile 'com.github.CarGuo:GSYVideoPlayer:v1.6.0'
 }

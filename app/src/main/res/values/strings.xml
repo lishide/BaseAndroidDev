@@ -26,6 +26,8 @@
     <string name="txt_bm_photo">图片浏览缩放控件</string>
     <string name="txt_c_banner">Banner-广告栏控件</string>
     <string name="txt_text_input">TextInputLayout</string>
+    <string name="txt_video_player">GSYVideoPlayer</string>
+    <string name="text_open_video">OPEN VIDEO</string>
 
     <string name="large_text">
         "Material is the metaphor.\n\n"

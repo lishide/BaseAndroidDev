@@ -60,6 +60,7 @@ NoHttp —— 一个有情怀的网络框架 ，让你的网络请求更简单�
 |compile 'com.bm.photoview:library:1.4.1'|图片浏览缩放控件|
 |compile 'com.bigkoo:convenientbanner:2.0.5'|Banner-广告栏控件|
 |compile 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:1.2.32@aar'|各种翻页效果|
+|compile 'com.github.CarGuo:GSYVideoPlayer:v1.6.0'|GSYVideoPlayer 视频播放器|
 
 ## 六、Material Design
 

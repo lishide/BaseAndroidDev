@@ -16,6 +16,7 @@ import com.example.dev.activity.BMImgClickActivity;
 import com.example.dev.activity.CBannerActivity;
 import com.example.dev.activity.CityPickerActivity;
 import com.example.dev.activity.CoverFlowDemoActivity;
+import com.example.dev.activity.GSYVideoActivity;
 import com.example.dev.activity.GalleryActivity;
 import com.example.dev.activity.LikeIosDialogActivity;
 import com.example.dev.activity.MaterialDialogActivity;
@@ -118,6 +119,10 @@ public class HomeFragment extends BaseFragment {
                 case 11:
                     bundle.putString("title", getString(R.string.txt_text_input));
                     readyGo(TextInputLayActivity.class, bundle);
+                    break;
+                case 12:
+                    bundle.putString("title", getString(R.string.txt_video_player));
+                    readyGo(GSYVideoActivity.class, bundle);
                     break;
             }
         }
