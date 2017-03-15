@@ -1,37 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="main_item_title">
-        <item>文本类自定义控件集合</item>
-        <item>CoverFlow示例</item>
-        <item>仿iOS的Dialog</item>
-        <item>省市区三级联动</item>
-        <item>图片/视频文件选择器</item>
-        <item>TabLayout 示例</item>
-        <item>Material Dialog 示例</item>
-        <item>新控件使用示例</item>
-        <item>RecyclerView（侧滑菜单和Refresh、LoadMore嵌套）</item>
-        <item>图片浏览缩放控件</item>
-        <item>Banner-广告栏控件</item>
-        <item>TextInputLayout</item>
-        <item>GSYVideoPlayer</item>
+        <item>0. 网络请求框架</item>
+        <item>1. RecyclerView（侧滑菜单和Refresh、LoadMore嵌套）</item>
+        <item>2. 文本类自定义控件集合</item>
+        <item>3. GSYVideoPlayer</item>
+        <item>4. Banner-广告栏控件</item>
+        <item>5. CoverFlow示例</item>
+        <item>6. 省市区三级联动</item>
+        <item>7. 图片/视频文件选择器</item>
+        <item>8. 图片浏览缩放控件</item>
+        <item>9. Material Design系列之TabLayout</item>
+        <item>10. Material Design系列之AppBar</item>
+        <item>11. Material Design系列之TextInputLayout</item>
+        <item>12. Material Dialog示例</item>
+        <item>13. 仿iOS的Dialog</item>
     </string-array>
 
     <string-array name="main_item_des">
-        <item>整理文本类自定义控件</item>
-        <item>参考ImageCoverFlow-master修改的，使用方法与LIST一样，设置相应的控件、修改imageCoverFlow布局的参数即可。</item>
-        <item>仿iOS的Dialog示例</item>
-        <item>CityPicker 高仿iOS 滚轮实现 省市区 城市选择三级联动</item>
-        <item>支持多选、单选、拍摄和裁剪，主题可自定义，无强制绑定第三方图片加载器。</item>
-        <item>Material Design 之 TabLayout 使用</item>
-        <item>Material Design 风格的自定义Dialog，GitHub地址：https://github.com/drakeet/MaterialDialog</item>
-        <item>CoordinatorLayout、CollapsingToolbarLayout、NestedScrollView、FloatingActionButton 等新控件的使用</item>
-        <item>RecyclerView（侧滑菜单和下拉刷新、上拉加载嵌套）</item>
-        <item>支持图片点击放大缩小浏览功能，单张多张图片预览，更多使用参考原作示例。GitHub地址：https://github.com/bm-x/PhotoView。</item>
-        <item>通用的广告栏控件，让你轻松实现广告头效果。支持无限循环，可以设置自动翻页和时间，并且提供多种翻页特效。</item>
-        <item>TextInputLayout：登录、注册等页面信息验证</item>
-        <item>视频播放器，HTTPS支持，支持弹幕，支持基本的拖动，声音、亮度调节，支持边播边缓存，
+        <item>0. Http网络请求框架\n
+            详见我的GitHub开源项目：\n
+            (1)NoHttpConnecter：https://github.com/lishide/NoHttpConnecter\n
+            (2)Volley的使用及其工具类的封装：https://github.com/lishide/MyVolley</item>
+        <item>1. RecyclerView（侧滑菜单和下拉刷新、上拉加载嵌套）</item>
+        <item>2. 整理文本类自定义控件</item>
+        <item>3. 视频播放器，HTTPS支持，支持弹幕，支持基本的拖动，声音、亮度调节，支持边播边缓存，
             支持视频本身自带rotation的旋转（90,270之类），重力旋转与手动旋转的同步支持，支持列表播放 ，
             直接添加控件为封面，列表全屏动画，视频加载速度，列表小窗口支持拖动，5.0的过场效果，调整比例，
             多分辨率切换，支持切换播放器，进度条小窗口预览，其他一些小动画效果。</item>
+        <item>4. 通用的广告栏控件，让你轻松实现广告头效果。支持无限循环，可以设置自动翻页和时间，并且提供多种翻页特效。</item>
+        <item>5. 参考ImageCoverFlow-master修改的，使用方法与LIST一样，设置相应的控件、修改imageCoverFlow布局的参数即可。</item>
+        <item>6. CityPicker 高仿iOS 滚轮实现 省市区 城市选择三级联动</item>
+        <item>7. 支持多选、单选、拍摄和裁剪，主题可自定义，无强制绑定第三方图片加载器。</item>
+        <item>8. 支持图片点击放大缩小浏览功能，单张多张图片预览，更多使用参考原作示例。
+            GitHub地址：https://github.com/bm-x/PhotoView</item>
+        <item>9. Material Design 之 TabLayout 使用</item>
+        <item>10. CoordinatorLayout、CollapsingToolbarLayout、NestedScrollView、FloatingActionButton 等新控件的使用</item>
+        <item>11. TextInputLayout：登录、注册等页面信息验证</item>
+        <item>12. Material Design 风格的自定义Dialog，GitHub地址：https://github.com/drakeet/MaterialDialog</item>
+        <item>13. 仿iOS的Dialog示例</item>
     </string-array>
 </resources>

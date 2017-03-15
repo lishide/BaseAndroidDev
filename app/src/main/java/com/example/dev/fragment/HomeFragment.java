@@ -73,56 +73,58 @@ public class HomeFragment extends BaseFragment {
             Bundle bundle = new Bundle();
             switch (position) {
                 case 0:
-                    bundle.putString("title", getString(R.string.text_text_demo));
-                    readyGo(TextDemoActivity.class, bundle);
                     break;
                 case 1:
-                    bundle.putString("title", getString(R.string.text_coverFlow_demo));
-                    readyGo(CoverFlowDemoActivity.class, bundle);
-                    break;
-                case 2:
-                    bundle.putString("title", getString(R.string.text_iOS_dialog));
-                    readyGo(LikeIosDialogActivity.class, bundle);
-                    break;
-                case 3:
-                    bundle.putString("title", getString(R.string.text_city_picker));
-                    readyGo(CityPickerActivity.class, bundle);
-                    break;
-                case 4:
-                    bundle.putString("title", getString(R.string.text_gallery));
-                    readyGo(GalleryActivity.class, bundle);
-                    break;
-                case 5:
-                    bundle.putString("title", getString(R.string.text_tab_lay));
-                    readyGo(TabLayDemoActivity.class, bundle);
-                    break;
-                case 6:
-                    bundle.putString("title", getString(R.string.txt_m_dlg));
-                    readyGo(MaterialDialogActivity.class, bundle);
-                    break;
-                case 7:
-                    bundle.putString("title", getString(R.string.txt_md_appbar_lay));
-                    readyGo(AppbarLayActivity.class, bundle);
-                    break;
-                case 8:
                     bundle.putString("title", getString(R.string.txt_swipe_recycler));
                     readyGo(SwipeRVDemoActivity.class, bundle);
                     break;
-                case 9:
+                case 2:
+                    bundle.putString("title", getString(R.string.text_text_demo));
+                    readyGo(TextDemoActivity.class, bundle);
+                    break;
+                case 3:
+                    bundle.putString("title", getString(R.string.txt_video_player));
+                    readyGo(GSYVideoActivity.class, bundle);
+                    break;
+                case 4:
+                    bundle.putString("title", getString(R.string.txt_c_banner));
+                    readyGo(CBannerActivity.class, bundle);
+                    break;
+                case 5:
+                    bundle.putString("title", getString(R.string.text_coverFlow_demo));
+                    readyGo(CoverFlowDemoActivity.class, bundle);
+                    break;
+                case 6:
+                    bundle.putString("title", getString(R.string.text_city_picker));
+                    readyGo(CityPickerActivity.class, bundle);
+                    break;
+                case 7:
+                    bundle.putString("title", getString(R.string.text_gallery));
+                    readyGo(GalleryActivity.class, bundle);
+                    break;
+                case 8:
                     bundle.putString("title", getString(R.string.txt_bm_photo));
                     readyGo(BMImgClickActivity.class, bundle);
                     break;
+                case 9:
+                    bundle.putString("title", getString(R.string.text_tab_lay));
+                    readyGo(TabLayDemoActivity.class, bundle);
+                    break;
                 case 10:
-                    bundle.putString("title", getString(R.string.txt_c_banner));
-                    readyGo(CBannerActivity.class, bundle);
+                    bundle.putString("title", getString(R.string.txt_md_appbar_lay));
+                    readyGo(AppbarLayActivity.class, bundle);
                     break;
                 case 11:
                     bundle.putString("title", getString(R.string.txt_text_input));
                     readyGo(TextInputLayActivity.class, bundle);
                     break;
                 case 12:
-                    bundle.putString("title", getString(R.string.txt_video_player));
-                    readyGo(GSYVideoActivity.class, bundle);
+                    bundle.putString("title", getString(R.string.txt_m_dlg));
+                    readyGo(MaterialDialogActivity.class, bundle);
+                    break;
+                case 13:
+                    bundle.putString("title", getString(R.string.text_iOS_dialog));
+                    readyGo(LikeIosDialogActivity.class, bundle);
                     break;
             }
         }

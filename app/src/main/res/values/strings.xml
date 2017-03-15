@@ -8,28 +8,28 @@
     <string name="tab2">TAB2</string>
     <string name="tab_me">我的</string>
 
-    <string name="text_text_demo">文本类自定义控件集合</string>
-    <string name="text_coverFlow_demo">CoverFlow示例</string>
-    <string name="text_iOS_dialog">仿iOS的Dialog</string>
-    <string name="text_city_picker">省市区三级联动</string>
-    <string name="text_picker_tip">选择省市区</string>
-    <string name="text_picker_res">选择结果：</string>
-    <string name="text_gallery">图片/视频文件选择器</string>
-    <string name="text_open">打开</string>
-    <string name="text_single">单选</string>
-    <string name="text_multi">多选</string>
-    <string name="text_tab_lay">TabLayout 示例</string>
-    <string name="txt_m_dlg">Material Dialog 示例</string>
-    <string name="txt_md_appbar_lay">新控件使用示例</string>
     <string name="txt_setting">设置</string>
     <string name="txt_swipe_recycler">RecyclerView-Refresh+LoadMore</string>
-    <string name="txt_bm_photo">图片浏览缩放控件</string>
-    <string name="txt_c_banner">Banner-广告栏控件</string>
-    <string name="txt_text_input">TextInputLayout</string>
+    <string name="text_text_demo">文本类自定义控件集合</string>
     <string name="txt_video_player">GSYVideoPlayer</string>
     <string name="text_open_video">OPEN VIDEO</string>
     <string name="text_rv_player">普通列表播放，滑出后不持有</string>
     <string name="text_rv_player_mini">支持重力旋转的列表播放，滑出后小窗</string>
+    <string name="txt_c_banner">Banner-广告栏控件</string>
+    <string name="text_coverFlow_demo">CoverFlow示例</string>
+    <string name="text_city_picker">省市区三级联动</string>
+    <string name="text_picker_tip">选择省市区</string>
+    <string name="text_picker_res">选择结果：</string>
+    <string name="text_gallery">图片/视频文件选择器</string>
+    <string name="txt_bm_photo">图片浏览缩放控件</string>
+    <string name="text_open">打开</string>
+    <string name="text_single">单选</string>
+    <string name="text_multi">多选</string>
+    <string name="text_tab_lay">TabLayout 示例</string>
+    <string name="txt_md_appbar_lay">AppBar 等示例</string>
+    <string name="txt_text_input">TextInputLayout</string>
+    <string name="txt_m_dlg">Material Dialog 示例</string>
+    <string name="text_iOS_dialog">仿iOS的Dialog</string>
 
     <string name="large_text">
         "Material is the metaphor.\n\n"
