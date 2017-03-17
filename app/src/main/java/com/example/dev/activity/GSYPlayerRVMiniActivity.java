@@ -14,6 +14,7 @@ import com.example.dev.R;
 import com.example.dev.adapter.RvVideoMiniAdapter;
 import com.example.dev.bean.VideoModel;
 import com.example.dev.listener.SampleVideoListener;
+import com.shuyu.gsyvideoplayer.GSYVideoManager;
 import com.shuyu.gsyvideoplayer.GSYVideoPlayer;
 import com.shuyu.gsyvideoplayer.utils.CommonUtil;
 import com.shuyu.gsyvideoplayer.utils.Debuger;
@@ -144,6 +145,18 @@ public class GSYPlayerRVMiniActivity extends BaseActivity {
             return;
         }
         super.onBackPressed();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        GSYVideoManager.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        GSYVideoManager.onResume();
     }
 
     @Override
