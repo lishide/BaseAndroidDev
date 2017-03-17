@@ -1,7 +1,31 @@
 # BaseAndroidDev
 一个基本的开发框架，便于自己及团队快速开发，包含各种实用的 BaseActivity 、BaseFragment 、framework 、utils  等，工（lao）程（si）师（ji）必备。
 
-##一、Base
+## 使用
+#### JitPack 引入方法
+##### 1. 在 Project 下的 build.gradle 添加
+```java
+allprojects {
+        repositories {
+            ...
+            maven { url 'https://jitpack.io' }
+        }
+    }
+```
+
+##### 2. 在 Module 下的 build.gradle 添加
+
+```java
+dependencies {
+            compile 'com.github.lishide:BaseAndroidDev:v1.0.0'
+    }
+```
+
+**Ps：在使用的时候请看清是以 `com.base.adev` 开头的包名。**
+
+---
+
+## 一、Base
 BaseActivity、BaseFragment、BaseAdapter
 
 ## 二、Net framework
