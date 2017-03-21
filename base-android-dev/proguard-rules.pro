@@ -90,3 +90,8 @@
    void set*(***);
    *** get*();
 }
+#8.gsyvideoplayer
+-keep class tv.danmaku.ijk.** { *; }
+-dontwarn tv.danmaku.ijk.**
+-keep class com.shuyu.gsyvideoplayer.** { *; }
+-dontwarn com.shuyu.gsyvideoplayer.**
