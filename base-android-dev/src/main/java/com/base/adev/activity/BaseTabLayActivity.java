@@ -1,6 +1,5 @@
 package com.base.adev.activity;
 
-import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -12,11 +11,6 @@ public abstract class BaseTabLayActivity extends BaseActivity {
     protected TabLayout mTabLayout;
     protected ViewPager mViewPager;
     protected TabAdapter mTabAdapter;
-
-    @Override
-    protected void initContentView(Bundle bundle) {
-        setContentView(R.layout.base_activity_tab_layout);
-    }
 
     @Override
     protected void initView() {
