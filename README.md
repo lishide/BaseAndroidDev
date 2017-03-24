@@ -45,11 +45,11 @@ NoHttp —— 一个有情怀的网络框架 ，让你的网络请求更简单�
 |---|---|
 |com.base.adev.view.MarqueeTextView|文字跑马灯功能（自定义跑马灯控件）|
 |com.base.adev.view.NoticeView|广告条控件|
-|com.base.adev.view.LedTextView|LED文字控件|
-|com.base.adev.view.coverflow.CoverFlowView|CoverFlow自定义控件|
-|com.base.adev.view.ActionSheetDialog|仿ios的底部弹出dialog|
-|com.base.adev.view.IosAlertDialog|仿ios的中间弹出dialog|
-|com.base.adev.view.ToastView|自定义ToastView控件|
+|com.base.adev.view.LedTextView|LED 文字控件|
+|com.base.adev.view.coverflow.CoverFlowView|CoverFlow 自定义控件|
+|com.base.adev.view.ActionSheetDialog|仿iOS 的底部弹出 dialog|
+|com.base.adev.view.IosAlertDialog|仿 iOS 的中间弹出 dialog|
+|com.base.adev.view.ToastView|自定义 ToastView 控件|
 
 ## 四、工具类
 收集整理一些实用的工具类，会持续更新。
@@ -63,7 +63,7 @@ NoHttp —— 一个有情怀的网络框架 ，让你的网络请求更简单�
 |ClickUtil|点击事件工具类|
 |SystemBarTintManager|沉浸状态栏使用|
 |MyGlideLoadUtil|Glide加载图片工具类|
-|MyBitmapImageViewTarget|Glide加载图片设置合适ScaleType的工具类|
+|MyBitmapImageViewTarget|Glide 加载图片设置合适 ScaleType 的工具类|
 |StatusBarUtils|状态栏设置工具类|
 |GetFolderSizeManager|获取文件夹大小|
 |DataCleanManager|本应用数据清除管理器|
@@ -73,19 +73,19 @@ NoHttp —— 一个有情怀的网络框架 ，让你的网络请求更简单�
 |dependencies|描述|
 |---|---|
 |compile 'com.mcxiaoke.volley:library:1.0.19'|Volley--网络请求框架|
-|compile 'com.google.code.gson:gson:2.7'|Gson--比较常用的JSON解析序列化库|
-|compile 'com.github.bumptech.glide:glide:3.7.0'|图片加载库Glide|
+|compile 'com.google.code.gson:gson:2.7'|Gson--比较常用的 JSON 解析序列化库|
+|compile 'com.github.bumptech.glide:glide:3.7.0'|图片加载库 Glide|
 |compile 'com.ashokvarma.android:bottom-navigation-bar:1.3.0'|BottomNavigation--Bottom Navigation Bar|
-|compile 'com.bigkoo:svprogresshud:1.0.6'|SVProgressHUD For Android 精仿iOS的提示库|
-|compile 'com.yanzhenjie:recyclerview-swipe:1.0.3'|SwipeRecyclerView--RecyclerView侧滑菜单，长按拖拽，滑动删除，加载更多下拉刷新等|
+|compile 'com.bigkoo:svprogresshud:1.0.6'|SVProgressHUD For Android 精仿 iOS 的提示库|
+|compile 'com.yanzhenjie:recyclerview-swipe:1.0.3'|SwipeRecyclerView--RecyclerView 侧滑菜单，长按拖拽，滑动删除，加载更多下拉刷新等|
 |compile 'liji.library.dev:citypickerview:0.9.0'|省市区三级联动|
 |compile 'cn.finalteam.rxgalleryfinal:library:0.0.3'|图片/视频文件选择器|
-|compile 'me.drakeet.materialdialog:library:1.3.1'|Material Design 风格的自定义Dialog|
+|compile 'me.drakeet.materialdialog:library:1.3.1'|Material Design 风格的自定义 Dialog|
 |compile 'com.bm.photoview:library:1.4.1'|图片浏览缩放控件|
 |compile 'com.bigkoo:convenientbanner:2.0.5'|Banner-广告栏控件|
 |compile 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:1.2.32@aar'|各种翻页效果|
 |compile 'com.github.CarGuo:GSYVideoPlayer:v1.6.0'|GSYVideoPlayer 视频播放器|
-|compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.8.9'|RecyclerView的强大的BaseAdapter|
+|compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.8.9'|RecyclerView 的强大的 BaseAdapter|
 
 ## 六、Material Design
 
