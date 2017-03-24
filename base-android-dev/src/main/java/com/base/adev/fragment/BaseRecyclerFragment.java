@@ -1,4 +1,4 @@
-package com.base.adev.activity;
+package com.base.adev.fragment;
 
 import android.support.annotation.LayoutRes;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -6,6 +6,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.view.View;
 
 import com.base.adev.R;
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -15,8 +16,9 @@ import com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class BaseRecyclerActivity<T> extends BaseActivity {
-    private static final String TAG = "BaseRecyclerActivity";
+
+public abstract class BaseRecyclerFragment<T> extends BaseFragment {
+    private static final String TAG = "BaseRecyclerFragment";
     protected SwipeRefreshLayout mSwipeRefreshLayout;
     protected SwipeMenuRecyclerView mSwipeMenuRecyclerView;
     protected RvAdapter mAdapter;
@@ -58,10 +60,10 @@ public abstract class BaseRecyclerActivity<T> extends BaseActivity {
     private SwipeRefreshLayout.OnRefreshListener mOnRefreshListener = null;
 
     @Override
-    protected void initView() {
+    protected void initView(View view) {
         initItemLayout();
-        mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.base_swipe_refresh_lay);
-        mSwipeMenuRecyclerView = (SwipeMenuRecyclerView) findViewById(R.id.base_rv_list);
+        mSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.base_swipe_refresh_lay);
+        mSwipeMenuRecyclerView = (SwipeMenuRecyclerView) view.findViewById(R.id.base_rv_list);
         setRefreshEnable(mCanRefresh, mOnRefreshListener);
         chooseListType(mListType, mIsVertical);
         if (-1 == layoutResId) {
@@ -146,12 +148,12 @@ public abstract class BaseRecyclerActivity<T> extends BaseActivity {
     private void chooseListType(int listType, boolean isVertical) {
         switch (listType) {
             case LINEAR_LAYOUT_MANAGER:
-                LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+                LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
                 linearLayoutManager.setOrientation(isVertical ? LinearLayoutManager.VERTICAL : LinearLayoutManager.HORIZONTAL);
                 mSwipeMenuRecyclerView.setLayoutManager(linearLayoutManager);
                 break;
             case GRID_LAYOUT_MANAGER:
-                GridLayoutManager gridLayoutManager = new GridLayoutManager(this, mSpanCount);
+                GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), mSpanCount);
                 gridLayoutManager.setOrientation(isVertical ? GridLayoutManager.VERTICAL : GridLayoutManager.HORIZONTAL);
                 mSwipeMenuRecyclerView.setLayoutManager(gridLayoutManager);
                 break;
@@ -161,7 +163,7 @@ public abstract class BaseRecyclerActivity<T> extends BaseActivity {
                 mSwipeMenuRecyclerView.setLayoutManager(staggeredGridLayoutManager);
                 break;
             default:
-                LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+                LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
                 layoutManager.setOrientation(isVertical ? LinearLayoutManager.VERTICAL : LinearLayoutManager.HORIZONTAL);
                 mSwipeMenuRecyclerView.setLayoutManager(layoutManager);
                 break;
