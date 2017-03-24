@@ -26,7 +26,33 @@ dependencies {
 ---
 
 ## 一、Base
-BaseActivity、BaseFragment、BaseAdapter
+#### 1. BaseActivity
+
+基础 Activity
+
+#### 2. BaseRecyclerActivity
+
+只有列表显示的界面的基础 Activity
+
+#### 3. BaseTabBottomActivity
+
+底部 Tab 的基础 Activity
+
+#### 4. BaseTabLayActivity
+
+顶部 TabLayout 的基础 Activity
+
+#### 5. BaseFragment
+
+基础 Fragment
+
+#### 6. BaseRecyclerFragment
+
+只有列表显示的界面的基础 Fragment
+
+#### 7. BaseAdapter
+
+基础 Adapter
 
 ## 二、Net framework
 
@@ -47,7 +73,7 @@ NoHttp —— 一个有情怀的网络框架 ，让你的网络请求更简单�
 |com.base.adev.view.NoticeView|广告条控件|
 |com.base.adev.view.LedTextView|LED 文字控件|
 |com.base.adev.view.coverflow.CoverFlowView|CoverFlow 自定义控件|
-|com.base.adev.view.ActionSheetDialog|仿iOS 的底部弹出 dialog|
+|com.base.adev.view.ActionSheetDialog|仿 iOS 的底部弹出 dialog|
 |com.base.adev.view.IosAlertDialog|仿 iOS 的中间弹出 dialog|
 |com.base.adev.view.ToastView|自定义 ToastView 控件|
 
@@ -62,7 +88,7 @@ NoHttp —— 一个有情怀的网络框架 ，让你的网络请求更简单�
 |ToastUtils|吐司相关工具类|
 |ClickUtil|点击事件工具类|
 |SystemBarTintManager|沉浸状态栏使用|
-|MyGlideLoadUtil|Glide加载图片工具类|
+|MyGlideLoadUtil|Glide 加载图片工具类|
 |MyBitmapImageViewTarget|Glide 加载图片设置合适 ScaleType 的工具类|
 |StatusBarUtils|状态栏设置工具类|
 |GetFolderSizeManager|获取文件夹大小|
