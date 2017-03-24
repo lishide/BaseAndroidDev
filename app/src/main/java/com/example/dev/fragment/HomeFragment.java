@@ -20,7 +20,7 @@ import com.example.dev.activity.GSYVideoActivity;
 import com.example.dev.activity.GalleryActivity;
 import com.example.dev.activity.LikeIosDialogActivity;
 import com.example.dev.activity.MaterialDialogActivity;
-import com.example.dev.activity.SwipeRVDemoActivity;
+import com.example.dev.activity.recycler.RvMultiFuncActivity;
 import com.example.dev.activity.TabLayDemoActivity;
 import com.example.dev.activity.TextDemoActivity;
 import com.example.dev.activity.TextInputLayActivity;
@@ -76,7 +76,7 @@ public class HomeFragment extends BaseFragment {
                     break;
                 case 1:
                     bundle.putString("title", getString(R.string.txt_swipe_recycler));
-                    readyGo(SwipeRVDemoActivity.class, bundle);
+                    readyGo(RvMultiFuncActivity.class, bundle);
                     break;
                 case 2:
                     bundle.putString("title", getString(R.string.text_text_demo));

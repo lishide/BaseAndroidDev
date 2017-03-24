@@ -59,4 +59,6 @@ dependencies {
     compile 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:1.2.32@aar'
     //GSYVideoPlayer 视频播放器
     compile 'com.github.CarGuo:GSYVideoPlayer:v1.6.0'
+    //RecyclerView的强大的BaseAdapter
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.8.9'
 }

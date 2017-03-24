@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--首页列表数据-->
     <string-array name="main_item_title">
         <item>0. 网络请求框架</item>
-        <item>1. RecyclerView（侧滑菜单和Refresh、LoadMore嵌套）</item>
+        <item>1. 多功能 RecyclerView 封装</item>
         <item>2. 文本类自定义控件集合</item>
         <item>3. GSYVideoPlayer</item>
         <item>4. Banner-广告栏控件</item>
@@ -18,11 +19,14 @@
     </string-array>
 
     <string-array name="main_item_des">
-        <item>0. Http网络请求框架\n
-            详见我的GitHub开源项目：\n
+        <item>0. Http 网络请求框架\n
+            详见我的 GitHub 开源项目：\n
             (1)NoHttpConnecter：https://github.com/lishide/NoHttpConnecter\n
             (2)Volley的使用及其工具类的封装：https://github.com/lishide/MyVolley</item>
-        <item>1. RecyclerView（侧滑菜单和下拉刷新、上拉加载嵌套）</item>
+        <item>1. RecyclerView 侧滑菜单，Item 拖拽，滑动删除 Item，自动加载更多，
+            和 ViewPager、DrawerLayout 结合使用，和任何下拉刷新框架结合使用。\n
+            RecyclerView 和 Adapter 的封装，简单列表的界面直接继承 BaseRecyclerActivity，
+            十几行代码即可出现 List 界面。</item>
         <item>2. 整理文本类自定义控件</item>
         <item>3. 视频播放器，HTTPS支持，支持弹幕，支持基本的拖动，声音、亮度调节，支持边播边缓存，
             支持视频本身自带rotation的旋转（90,270之类），重力旋转与手动旋转的同步支持，支持列表播放 ，
@@ -39,5 +43,15 @@
         <item>11. TextInputLayout：登录、注册等页面信息验证</item>
         <item>12. Material Design 风格的自定义Dialog，GitHub地址：https://github.com/drakeet/MaterialDialog</item>
         <item>13. 仿iOS的Dialog示例</item>
+    </string-array>
+
+    <!--多功能 RecyclerView 展示列表数据-->
+    <string-array name="recycler_item_title">
+        <item>RecyclerView（侧滑菜单和Refresh、LoadMore嵌套）</item>
+
+    </string-array>
+    <string-array name="recycler_item_des">
+        <item>RecyclerView（侧滑菜单和下拉刷新、上拉加载嵌套）</item>
+
     </string-array>
 </resources>

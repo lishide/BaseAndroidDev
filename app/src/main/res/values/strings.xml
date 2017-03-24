@@ -9,7 +9,7 @@
     <string name="tab_me">我的</string>
 
     <string name="txt_setting">设置</string>
-    <string name="txt_swipe_recycler">RecyclerView-Refresh+LoadMore</string>
+    <string name="txt_swipe_recycler">多功能 RecyclerView 封装</string>
     <string name="text_text_demo">文本类自定义控件集合</string>
     <string name="txt_video_player">GSYVideoPlayer</string>
     <string name="text_open_video">OPEN VIDEO</string>

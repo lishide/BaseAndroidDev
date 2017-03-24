@@ -64,7 +64,8 @@
             android:theme="@style/MDTheme"
             android:windowSoftInputMode="stateAlwaysHidden"/>
         <activity android:name=".activity.SettingActivity"/>
-        <activity android:name=".activity.SwipeRVDemoActivity"/>
+        <activity android:name=".activity.recycler.RvMultiFuncActivity"/>
+        <activity android:name=".activity.recycler.SwipeRVDemoActivity"/>
         <activity android:name=".activity.BMImgClickActivity"/>
         <activity android:name=".activity.CBannerActivity"/>
         <activity
