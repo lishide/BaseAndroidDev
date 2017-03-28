@@ -4,14 +4,15 @@ apply plugin: 'com.github.dcendents.android-maven'
 group = 'com.github.lishide'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+    compileSdkVersion globalConfiguration.androidCompileSdkVersion
+    buildToolsVersion globalConfiguration.androidBuildToolsVersion
     defaultConfig {
 
-        minSdkVersion 16
-        targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion globalConfiguration.androidMinSdkVersion
+        targetSdkVersion globalConfiguration.androidTargetSdkVersion
+        versionCode globalConfiguration.versionCode
+        versionName globalConfiguration.versionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -28,38 +29,43 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.3.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:support-v4:25.3.0'
-    compile 'com.android.support:design:25.3.0'
-    // Volley 网络请求框架
-    //compile 'com.mcxiaoke.volley:library:1.0.19'
+    def androidDps = rootProject.ext.androidDependencies
+    def viewDps = rootProject.ext.viewDependencies
+    def dataDps = rootProject.ext.dataDependencies
+    compile androidDps.appcompat_v7
+    compile androidDps.support_v4
+    compile androidDps.design
+    compile androidDps.cardview_v7
+    compile androidDps.constraintLayout
 
-    compile 'com.google.code.gson:gson:2.7'
+    // Volley 网络请求框架
+//    compile dataDps.volley
+    // gson
+    compile dataDps.gson
     //BottomNavigation
-    compile 'com.ashokvarma.android:bottom-navigation-bar:1.4.1'
+    compile viewDps.bnb
     //图片加载库 Glide
-    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile dataDps.glide
     //省市区三级联动
-    compile 'liji.library.dev:citypickerview:0.9.0'
+    compile viewDps.citypickerview
     //图片/视频文件选择器
-    compile 'cn.finalteam.rxgalleryfinal:library:0.0.3'
+    compile viewDps.rxgalleryfinal
     //Material Design 风格的自定义 Dialog
-    compile 'me.drakeet.materialdialog:library:1.3.1'
+    compile viewDps.materialdialog
     //A circular ImageView for Android
-    compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile viewDps.circleimageview
     //SwipeRecyclerView
-    compile 'com.yanzhenjie:recyclerview-swipe:1.0.3'
+    compile viewDps.swipeRecyclerView
     //精仿 iOS 的提示库 SVProgressHUD
-    compile 'com.bigkoo:svprogresshud:1.0.6'
+    compile viewDps.svprogresshud
     //图片浏览缩放控件
-    compile 'com.bm.photoview:library:1.4.1'
+    compile viewDps.photoview
     //banner
-    compile 'com.bigkoo:convenientbanner:2.0.5'
-    compile 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:1.2.32@aar'
+    compile viewDps.convenientbanner
+    compile viewDps.vptransforms
     //GSYVideoPlayer 视频播放器
-    compile 'com.github.CarGuo:GSYVideoPlayer:v1.6.0'
+    compile viewDps.GSYVideoPlayer
     //RecyclerView 的强大的 BaseAdapter
-    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.8.9'
+    compile viewDps.baservadapter
 }

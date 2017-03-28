@@ -1,0 +1,83 @@
+ext {
+    //Android
+    androidBuildToolsVersion = "25.0.2"
+    androidMinSdkVersion = 16
+    androidTargetSdkVersion = 25
+    androidCompileSdkVersion = 25
+    supportLibraryVersion = '25.3.0'
+    otherLibraryVersion = '25.3.0'
+    applicationId = 'com.example.dev'
+    versionCode = 1
+    versionName = '1.0'
+    constraintLayout = '1.0.2'
+
+    //ViewLibraries
+    bnb = '1.4.1'
+    citypickerview = '0.9.0'
+    rxgalleryfinal = '0.0.3'
+    materialdialog = '1.3.1'
+    circleimageview = '2.0.0'
+    swipeRecyclerView = '1.0.3'
+    svprogresshud = '1.0.6'
+    photoview = '1.4.1'
+    convenientbanner = '2.0.5'
+    vptransforms = '1.2.32@aar'
+    GSYVideoPlayer = 'v1.6.0'
+    baservadapter = '2.8.9'
+
+    //DataLibraries
+    volley = '1.0.19'
+    glide = '3.7.0'
+    gson = '2.7'
+
+    androidDependencies = [
+            appcompat_v7    : "com.android.support:appcompat-v7:${supportLibraryVersion}",
+            support_v4      : "com.android.support:support-v4:${supportLibraryVersion}",
+            recyclerView    : "com.android.support:recyclerview-v7:${supportLibraryVersion}",
+            cardview_v7     : "com.android.support:cardview-v7:${supportLibraryVersion}",
+            design          : "com.android.support:design:${supportLibraryVersion}",
+            constraintLayout: "com.android.support.constraint:constraint-layout:${constraintLayout}",
+    ]
+
+    viewDependencies = [
+            //BottomNavigation
+            bnb              : "com.ashokvarma.android:bottom-navigation-bar:${bnb}",
+
+            //省市区三级联动
+            citypickerview   : "liji.library.dev:citypickerview:${citypickerview}",
+
+            //图片/视频文件选择器
+            rxgalleryfinal   : "cn.finalteam.rxgalleryfinal:library:${rxgalleryfinal}",
+
+            //Material Design 风格的自定义 Dialog
+            materialdialog   : "me.drakeet.materialdialog:library:${materialdialog}",
+
+            //A circular ImageView for Android
+            circleimageview  : "de.hdodenhof:circleimageview:${circleimageview}",
+
+            //SwipeRecyclerView
+            swipeRecyclerView: "com.yanzhenjie:recyclerview-swipe:${swipeRecyclerView}",
+
+            //精仿 iOS 的提示库 SVProgressHUD
+            svprogresshud    : "com.bigkoo:svprogresshud:${svprogresshud}",
+
+            //图片浏览缩放控件
+            photoview        : "com.bm.photoview:library:${photoview}",
+
+            //banner
+            convenientbanner : "com.bigkoo:convenientbanner:${convenientbanner}",
+            vptransforms     : "com.ToxicBakery.viewpager.transforms:view-pager-transforms:${vptransforms}",
+
+            //GSYVideoPlayer 视频播放器
+            GSYVideoPlayer   : "com.github.CarGuo:GSYVideoPlayer:${GSYVideoPlayer}",
+
+            //RecyclerView 的强大的 BaseAdapter
+            baservadapter    : "com.github.CymChad:BaseRecyclerViewAdapterHelper:${baservadapter}",
+    ]
+
+    dataDependencies = [
+            volley: "com.mcxiaoke.volley:library:${volley}",
+            glide : "com.github.bumptech.glide:glide:${glide}",
+            gson  : "com.google.code.gson:gson:${gson}",
+    ]
+}
