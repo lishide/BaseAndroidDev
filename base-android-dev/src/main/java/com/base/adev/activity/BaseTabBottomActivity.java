@@ -1,10 +1,8 @@
 package com.base.adev.activity;
 
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
@@ -13,90 +11,130 @@ import com.base.adev.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class BaseTabBottomActivity extends BaseActivity {
-
-    private BottomBarUtil bottomBarUtil;
+/**
+ * 底部 Tab 的基础 Activity
+ * 继承此 Activity 后，初始化布局、添加 addItem、initialise 两个方法，传入相关的图标及文字即可。
+ * 想要更换 BottomNavigationBar 风格样式，请设置 setNavBarStyle 方法。
+ */
+public abstract class BaseTabBottomActivity extends BaseActivity
+        implements BottomNavigationBar.OnTabSelectedListener {
+    private FragmentManager mFragmentManager;
+    private BottomNavigationBar mBottomNavigationBar;
+    private final List<Fragment> fragmentList = new ArrayList<>();
+    /**
+     * BottomNavigationBar 的风格，默认：MODE_DEFAULT
+     */
+    private int mMode = BottomNavigationBar.MODE_DEFAULT;
+    /**
+     * BottomNavigationBar 的背景样式，默认：BACKGROUND_STYLE_DEFAULT
+     */
+    private int mBackgroundStyle = BottomNavigationBar.BACKGROUND_STYLE_DEFAULT;
 
     @Override
-    protected void initContentView(Bundle bundle) {
-        setContentView(R.layout.base_activity_tab_bottom);
-        bottomBarUtil = new BottomBarUtil(this, R.id.llRoot, R.id.bottom_bar);
+    protected void initView() {
+        mFragmentManager = this.getSupportFragmentManager();
+        mBottomNavigationBar = (BottomNavigationBar) findViewById(R.id.bottom_navigation_bar);
+        mBottomNavigationBar.setTabSelectedListener(this);
     }
 
-    protected void addFragment(Fragment fragment, String title, int imgId) {
-        bottomBarUtil.addItem(fragment, title, imgId, R.color.colorPrimary);
+    /**
+     * 添加 fragment 及 BottomNavigationItem（图标和文字）
+     *
+     * @param fragment    fragment
+     * @param imageId     图标 ID
+     * @param title       标题（String）
+     * @param activeColor 选定时颜色
+     */
+    public void addItem(Fragment fragment, int imageId, String title, int activeColor) {
+        fragmentList.add(fragment);
+        mBottomNavigationBar
+                .addItem(new BottomNavigationItem(imageId, title).setActiveColorResource(activeColor));
     }
 
-    protected void addFragment(Fragment fragment, int titleId, int imgId) {
-        bottomBarUtil.addItem(fragment, getResources().getString(titleId), imgId, R.color.colorPrimary);
+    /**
+     * 添加 fragment 及 BottomNavigationItem（图标和文字）
+     *
+     * @param fragment    fragment
+     * @param imageId     图标 ID
+     * @param title       标题（int）
+     * @param activeColor 选定时颜色
+     */
+    public void addItem(Fragment fragment, int imageId, int title, int activeColor) {
+        fragmentList.add(fragment);
+        mBottomNavigationBar
+                .addItem(new BottomNavigationItem(imageId, title).setActiveColorResource(activeColor));
     }
 
-    protected void onTabSelected(int position) {
-
+    /**
+     * 添加 fragment 及 BottomNavigationItem（仅图标）
+     *
+     * @param fragment    fragment
+     * @param imageId     图标 ID
+     * @param activeColor 选定时颜色
+     */
+    public void addItem(Fragment fragment, int imageId, int activeColor) {
+        fragmentList.add(fragment);
+        mBottomNavigationBar
+                .addItem(new BottomNavigationItem(imageId).setActiveColorResource(activeColor));
     }
 
-    protected void initialise() {
-        bottomBarUtil.initialise();
+    /**
+     * 设置 BottomNavigationBar 风格样式
+     *
+     * @param mode            风格
+     * @param backgroundStyle 背景样式
+     */
+    protected void setNavBarStyle(int mode, int backgroundStyle) {
+        mMode = mode;
+        mBackgroundStyle = backgroundStyle;
     }
 
-    class BottomBarUtil implements BottomNavigationBar.OnTabSelectedListener {
-
-        private int rootViewId;
-        private FragmentManager fragmentManager;
-        private BottomNavigationBar navigationBar;
-        private final List<Fragment> fragmentList = new ArrayList<>();
-
-        public BottomBarUtil(AppCompatActivity activity, int rootViewId, int barId) {
-            this.rootViewId = rootViewId;
-
-            fragmentManager = activity.getSupportFragmentManager();
-            navigationBar = (BottomNavigationBar) activity.findViewById(barId);
-            navigationBar.setMode(BottomNavigationBar.MODE_DEFAULT);
+    /**
+     * 初始化容器，添加 fragment
+     *
+     * @param containerViewId 容器 ID
+     */
+    public void initialise(int containerViewId) {
+        mBottomNavigationBar.setMode(mMode);
+        mBottomNavigationBar.setBackgroundStyle(mBackgroundStyle);
+        FragmentTransaction transaction = mFragmentManager.beginTransaction();
+        for (Fragment fragment : fragmentList) {
+            transaction.add(containerViewId, fragment);
         }
+        transaction.commit();
+        showFragment(0);
+        mBottomNavigationBar.initialise();
+    }
 
-        public void addItem(Fragment fragment, String title, Integer imageId, int color) {
-            fragmentList.add(fragment);
-            navigationBar.addItem(new BottomNavigationItem(imageId, title).setInActiveColor(color));
-        }
-
-        public void initialise() {
-            FragmentTransaction transaction = fragmentManager.beginTransaction();
-            for (Fragment fragment : fragmentList) {
-                transaction.add(rootViewId, fragment);
+    /**
+     * 显示 fragment
+     *
+     * @param position 位置
+     */
+    private void showFragment(int position) {
+        FragmentTransaction transaction = mFragmentManager.beginTransaction();
+        for (int i = 0; i < fragmentList.size(); i++) {
+            if (i != position) {
+                transaction.hide(fragmentList.get(i));
+            } else {
+                transaction.show(fragmentList.get(i));
             }
-            transaction.commit();
-            showFragment(0);
-            navigationBar.initialise();
-            navigationBar.setTabSelectedListener(this);
         }
+        transaction.commit();
+    }
 
-        private void showFragment(int position) {
-            FragmentTransaction transaction = fragmentManager.beginTransaction();
-            for (int i = 0; i < fragmentList.size(); i++) {
-                if (i != position) {
-                    transaction.hide(fragmentList.get(i));
-                } else {
-                    transaction.show(fragmentList.get(i));
-                }
-            }
-            transaction.commit();
-        }
+    @Override
+    public void onTabSelected(int position) {
+        showFragment(position);
+    }
 
-        @Override
-        public void onTabSelected(int position) {
-            navigationBar.selectTab(position);
-            showFragment(position);
-            BaseTabBottomActivity.this.onTabSelected(position);
-        }
+    @Override
+    public void onTabUnselected(int position) {
 
-        @Override
-        public void onTabUnselected(int position) {
+    }
 
-        }
+    @Override
+    public void onTabReselected(int position) {
 
-        @Override
-        public void onTabReselected(int position) {
-
-        }
     }
 }

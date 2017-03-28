@@ -17,7 +17,7 @@ allprojects {
 
 ```java
 dependencies {
-            compile 'com.github.lishide:BaseAndroidDev:v1.0.0'
+            compile 'com.github.lishide:BaseAndroidDev:v1.0.3'
     }
 ```
 
@@ -101,7 +101,7 @@ NoHttp —— 一个有情怀的网络框架 ，让你的网络请求更简单�
 |compile 'com.mcxiaoke.volley:library:1.0.19'|Volley--网络请求框架|
 |compile 'com.google.code.gson:gson:2.7'|Gson--比较常用的 JSON 解析序列化库|
 |compile 'com.github.bumptech.glide:glide:3.7.0'|图片加载库 Glide|
-|compile 'com.ashokvarma.android:bottom-navigation-bar:1.3.0'|BottomNavigation--Bottom Navigation Bar|
+|compile 'com.ashokvarma.android:bottom-navigation-bar:1.4.1'|BottomNavigation--Bottom Navigation Bar|
 |compile 'com.bigkoo:svprogresshud:1.0.6'|SVProgressHUD For Android 精仿 iOS 的提示库|
 |compile 'com.yanzhenjie:recyclerview-swipe:1.0.3'|SwipeRecyclerView--RecyclerView 侧滑菜单，长按拖拽，滑动删除，加载更多下拉刷新等|
 |compile 'liji.library.dev:citypickerview:0.9.0'|省市区三级联动|
