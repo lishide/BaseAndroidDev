@@ -37,16 +37,16 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     testCompile 'junit:junit:4.12'
-    def androidDependencies = rootProject.ext.androidDependencies
-    def viewDependencies = rootProject.ext.viewDependencies
-    def dataDependencies = rootProject.ext.dataDependencies
-    compile androidDependencies.appcompat_v7
-    compile androidDependencies.support_v4
-    compile androidDependencies.design
-    compile androidDependencies.cardview_v7
+    def androidDps = rootProject.ext.androidDependencies
+    def viewDps = rootProject.ext.viewDependencies
+    def dataDps = rootProject.ext.dataDependencies
+    compile androidDps.appcompat_v7
+    compile androidDps.support_v4
+    compile androidDps.design
+    compile androidDps.cardview_v7
 
-    compile dataDependencies.glide
-    compile dataDependencies.gson
+    compile dataDps.glide
+    compile dataDps.gson
     compile project(path: ':base-android-dev')
     compile project(':base-android-dev')
 
