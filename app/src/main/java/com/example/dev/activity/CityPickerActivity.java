@@ -66,6 +66,11 @@ public class CityPickerActivity extends BaseActivity {
                                 + "\n区：" + citySelected[2]
                                 + "\n邮编：" + citySelected[3]);
                     }
+
+                    @Override
+                    public void onCancel() {
+                        showShortToast("已取消");
+                    }
                 });
             }
         });

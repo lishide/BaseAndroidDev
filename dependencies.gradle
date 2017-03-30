@@ -13,17 +13,17 @@ ext {
 
     //ViewLibraries
     bnb = '1.4.1'
-    citypickerview = '0.9.0'
-    rxgalleryfinal = '0.0.3'
+    citypickerview = '1.0.0'
+    rxgalleryfinal = '0.0.9'
     materialdialog = '1.3.1'
-    circleimageview = '2.0.0'
-    swipeRecyclerView = '1.0.3'
+    circleimageview = '2.1.0'
+    swipeRecyclerView = '1.0.4'
     svprogresshud = '1.0.6'
     photoview = '1.4.1'
     convenientbanner = '2.0.5'
     vptransforms = '1.2.32@aar'
-    GSYVideoPlayer = 'v1.6.0'
-    baservadapter = '2.8.9'
+    GSYVideoPlayer = 'v1.6.1'
+    baservadapter = '2.9.3'
 
     //DataLibraries
     volley = '1.0.19'

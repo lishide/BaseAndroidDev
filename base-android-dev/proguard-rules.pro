@@ -95,3 +95,7 @@
 -dontwarn tv.danmaku.ijk.**
 -keep class com.shuyu.gsyvideoplayer.** { *; }
 -dontwarn com.shuyu.gsyvideoplayer.**
+#9.BaseRecyclerViewAdapterHelper
+-keep class com.chad.library.adapter.** {
+   *;
+}
