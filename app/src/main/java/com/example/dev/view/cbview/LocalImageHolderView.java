@@ -1,4 +1,4 @@
-package com.base.adev.view.cbview;
+package com.example.dev.view.cbview;
 
 import android.content.Context;
 import android.view.View;

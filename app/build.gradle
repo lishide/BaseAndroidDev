@@ -44,10 +44,31 @@ dependencies {
     compile androidDps.support_v4
     compile androidDps.design
     compile androidDps.cardview_v7
-
-    compile dataDps.glide
-    compile dataDps.gson
     compile project(path: ':base-android-dev')
     compile project(':base-android-dev')
 
+    // Glide 和 gson 已在 base-android-dev 的 module 中添加，此 module 中不再重复添加。
+//    //图片加载库 Glide
+//    compile dataDps.glide
+//    // gson
+//    compile dataDps.gson
+//    // Volley 网络请求框架
+//    compile dataDps.volley
+    //省市区三级联动
+    compile viewDps.citypickerview
+    //图片/视频文件选择器
+    compile viewDps.rxgalleryfinal
+    //Material Design 风格的自定义 Dialog
+    compile viewDps.materialdialog
+    //A circular ImageView for Android
+    compile viewDps.circleimageview
+    //精仿 iOS 的提示库 SVProgressHUD
+    compile viewDps.svprogresshud
+    //图片浏览缩放控件
+    compile viewDps.photoview
+    //banner
+    compile viewDps.convenientbanner
+    compile viewDps.vptransforms
+    //GSYVideoPlayer 视频播放器
+    compile viewDps.GSYVideoPlayer
 }

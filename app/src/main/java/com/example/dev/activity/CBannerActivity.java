@@ -24,7 +24,7 @@ import com.ToxicBakery.viewpager.transforms.StackTransformer;
 import com.ToxicBakery.viewpager.transforms.ZoomInTransformer;
 import com.ToxicBakery.viewpager.transforms.ZoomOutTranformer;
 import com.base.adev.activity.BaseActivity;
-import com.base.adev.view.cbview.LocalImageHolderView;
+import com.example.dev.view.cbview.LocalImageHolderView;
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.listener.OnItemClickListener;

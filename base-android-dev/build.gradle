@@ -39,33 +39,14 @@ dependencies {
     compile androidDps.cardview_v7
     compile androidDps.constraintLayout
 
-    // Volley 网络请求框架
-//    compile dataDps.volley
+    //图片加载库 Glide
+    compile dataDps.glide
     // gson
     compile dataDps.gson
     //BottomNavigation
     compile viewDps.bnb
-    //图片加载库 Glide
-    compile dataDps.glide
-    //省市区三级联动
-    compile viewDps.citypickerview
-    //图片/视频文件选择器
-    compile viewDps.rxgalleryfinal
-    //Material Design 风格的自定义 Dialog
-    compile viewDps.materialdialog
-    //A circular ImageView for Android
-    compile viewDps.circleimageview
     //SwipeRecyclerView
     compile viewDps.swipeRecyclerView
-    //精仿 iOS 的提示库 SVProgressHUD
-    compile viewDps.svprogresshud
-    //图片浏览缩放控件
-    compile viewDps.photoview
-    //banner
-    compile viewDps.convenientbanner
-    compile viewDps.vptransforms
-    //GSYVideoPlayer 视频播放器
-    compile viewDps.GSYVideoPlayer
     //RecyclerView 的强大的 BaseAdapter
     compile viewDps.baservadapter
 }
