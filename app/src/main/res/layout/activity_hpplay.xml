@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="播放地址"/>
+
+        <EditText
+            android:id="@+id/hpplay_play_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="rtmp:/ve.hkstv.hk.lxdns.com/live/hks"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/hpplay_mirror"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="只接入镜像"/>
+
+        <Button
+            android:id="@+id/hpplay_push"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="只接入投屏"/>
+
+        <Button
+            android:id="@+id/hpplay_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="投屏与镜像"/>
+    </LinearLayout>
+
+</LinearLayout>

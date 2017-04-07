@@ -31,12 +31,20 @@ android {
     sourceSets { main { res.srcDirs = ['src/main/res', 'src/main/res/drawable'] } }
 }
 
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     testCompile 'junit:junit:4.12'
+    // 乐播投屏 aar
+    compile(name: 'hpplay-link', ext: 'aar')
     def androidDps = rootProject.ext.androidDependencies
     def viewDps = rootProject.ext.viewDependencies
     def dataDps = rootProject.ext.dataDependencies

@@ -18,12 +18,13 @@ import com.example.dev.activity.CityPickerActivity;
 import com.example.dev.activity.CoverFlowDemoActivity;
 import com.example.dev.activity.GSYVideoActivity;
 import com.example.dev.activity.GalleryActivity;
+import com.example.dev.activity.HpplayActivity;
 import com.example.dev.activity.LikeIosDialogActivity;
 import com.example.dev.activity.MaterialDialogActivity;
-import com.example.dev.activity.recycler.RvMultiFuncActivity;
 import com.example.dev.activity.TabLayDemoActivity;
 import com.example.dev.activity.TextDemoActivity;
 import com.example.dev.activity.TextInputLayActivity;
+import com.example.dev.activity.recycler.RvMultiFuncActivity;
 import com.example.dev.adapter.MainWidgetAdapter;
 import com.example.dev.bean.ListItemInfo;
 import com.example.dev.listener.OnItemClickListener;
@@ -125,6 +126,10 @@ public class HomeFragment extends BaseFragment {
                 case 13:
                     bundle.putString("title", getString(R.string.text_iOS_dialog));
                     readyGo(LikeIosDialogActivity.class, bundle);
+                    break;
+                case 14:
+                    bundle.putString("title", getString(R.string.text_hpplay));
+                    readyGo(HpplayActivity.class, bundle);
                     break;
             }
         }

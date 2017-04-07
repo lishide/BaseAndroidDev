@@ -88,6 +88,9 @@
             android:name=".activity.GSYPlayerRVMiniActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.HpplayActivity"
+            android:configChanges="screenSize|orientation"/>
     </application>
 
 </manifest>
