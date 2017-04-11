@@ -44,7 +44,7 @@
         <item>11. TextInputLayout：登录、注册等页面信息验证</item>
         <item>12. Material Design 风格的自定义Dialog，GitHub地址：https://github.com/drakeet/MaterialDialog</item>
         <item>13. 仿iOS的Dialog示例</item>
-        <item>14. 乐播投屏 Demo</item>
+        <item>14. 演示“乐播投屏 SDK”投屏与镜像的接入和关闭等功能</item>
     </string-array>
 
     <!--多功能 RecyclerView 展示列表数据-->

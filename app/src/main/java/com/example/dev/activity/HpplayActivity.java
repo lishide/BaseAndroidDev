@@ -13,6 +13,9 @@ import com.example.dev.R;
 import com.hpplay.callback.HpplayWindowPlayCallBack;
 import com.hpplay.link.HpplayLinkControl;
 
+/**
+ * 乐播投屏 Demo
+ */
 public class HpplayActivity extends BaseActivity implements View.OnClickListener {
     private static final String TAG = "HpplayActivity";
     private String title;
@@ -39,10 +42,12 @@ public class HpplayActivity extends BaseActivity implements View.OnClickListener
         mHpplayLinkControl.setDebug(true);
         mHpplayLinkControl.initHpplayLink(this, mKey);
 
-        mPlayUrlEdit = (EditText) findViewById(R.id.hpplay_play_url);
+        mPlayUrlEdit = (EditText) findViewById(R.id.et_hpplay_play);
         findViewById(R.id.hpplay_mirror).setOnClickListener(this);
         findViewById(R.id.hpplay_push).setOnClickListener(this);
         findViewById(R.id.hpplay_all).setOnClickListener(this);
+        findViewById(R.id.btn_hpplay_close_mirr).setOnClickListener(this);
+        findViewById(R.id.btn_hpplay_close_connect).setOnClickListener(this);
     }
 
     @Override
@@ -73,45 +78,60 @@ public class HpplayActivity extends BaseActivity implements View.OnClickListener
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.hpplay_mirror:
-                mHpplayLinkControl.showHpplayWindow(HpplayActivity.this, null);
+                mHpplayLinkControl.showHpplayWindow(context, null);
                 break;
             case R.id.hpplay_push:
                 mPlayUrl = mPlayUrlEdit.getText().toString();
-                if (mPlayUrl == null || TextUtils.isEmpty(mPlayUrl)) {
-//                    mPlayUrl = "rtmp:/ve.hkstv.hk.lxdns.com/live/hks";
-                    mPlayUrl = "http://cdn.magicmirrormedia.cn/video/7e278656b44fc9af7cb979055ace4385.mp4";
+                if (TextUtils.isEmpty(mPlayUrl)) {
+                    mPlayUrl = "rtmp://live.hkstv.hk.lxdns.com/live/hks";
                 }
-                mHpplayLinkControl.showHpplayWindow(HpplayActivity.this, mPlayUrl, 0, new HpplayWindowPlayCallBack() {
-                    @Override
-                    public void onIsConnect(boolean b) {
-                        Log.d(TAG, "是否成功连接到电视 " + b);
-                    }
+                mHpplayLinkControl.showHpplayWindow(context, mPlayUrl, 0,
+                        new HpplayWindowPlayCallBack() {
+                            @Override
+                            public void onIsConnect(boolean b) {
+                                Log.d(TAG, "是否成功连接到电视 " + b);
+                            }
 
-                    @Override
-                    public void onIsPlaySuccess(boolean b) {
-                        Log.d(TAG, "是否成功推送地址到电视 " + b);
-                    }
-                });
+                            @Override
+                            public void onIsPlaySuccess(boolean b) {
+                                Log.d(TAG, "是否成功推送地址到电视 " + b);
+                            }
+                        });
                 break;
             case R.id.hpplay_all:
                 mPlayUrl = mPlayUrlEdit.getText().toString();
-                if (mPlayUrl == null || TextUtils.isEmpty(mPlayUrl)) {
-//                    mPlayUrl = "rtmp:/ve.hkstv.hk.lxdns.com/live/hks";
-                    mPlayUrl = "http://cdn.magicmirrormedia.cn/video/7e278656b44fc9af7cb979055ace4385.mp4";
+                if (TextUtils.isEmpty(mPlayUrl)) {
+                    mPlayUrl = "rtmp://live.hkstv.hk.lxdns.com/live/hks";
                 }
-                mHpplayLinkControl.showHpplayWindow(HpplayActivity.this, mPlayUrl, new HpplayWindowPlayCallBack() {
-                    @Override
-                    public void onIsConnect(boolean b) {
-                        Log.d(TAG, "是否成功连接到电视 " + b);
-                    }
+                mHpplayLinkControl.showHpplayWindow(context, mPlayUrl,
+                        new HpplayWindowPlayCallBack() {
+                            @Override
+                            public void onIsConnect(boolean b) {
+                                Log.d(TAG, "是否成功连接到电视 " + b);
+                            }
 
-                    @Override
-                    public void onIsPlaySuccess(boolean b) {
-                        Log.d(TAG, "是否成功推送地址到电视 " + b);
-                    }
-                });
+                            @Override
+                            public void onIsPlaySuccess(boolean b) {
+                                Log.d(TAG, "是否成功推送地址到电视 " + b);
+                            }
+                        });
                 break;
-
+            case R.id.btn_hpplay_close_mirr:
+                if (mHpplayLinkControl.getMirrState()) {
+                    showShortToast("镜像中，正在关闭");
+                    mHpplayLinkControl.closeHpplayLink();
+                } else {
+                    showShortToast("未镜像");
+                }
+                break;
+            case R.id.btn_hpplay_close_connect:
+                if (mHpplayLinkControl.isConnect()) {
+                    showShortToast("连接中，正在关闭");
+                    mHpplayLinkControl.closeHpplayLink();
+                } else {
+                    showShortToast("未连接");
+                }
+                break;
             default:
                 break;
         }
