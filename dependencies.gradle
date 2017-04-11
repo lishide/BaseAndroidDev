@@ -22,6 +22,7 @@ ext {
     photoview = '1.4.1'
     convenientbanner = '2.0.5'
     vptransforms = '1.2.32@aar'
+    lsdImgCoverFlow = 'v1.0.0'
     GSYVideoPlayer = 'v1.6.1'
     baservadapter = '2.9.3'
 
@@ -67,6 +68,9 @@ ext {
             //banner
             convenientbanner : "com.bigkoo:convenientbanner:${convenientbanner}",
             vptransforms     : "com.ToxicBakery.viewpager.transforms:view-pager-transforms:${vptransforms}",
+
+            // CoverFlow
+            lsdImgCoverFlow  : "com.github.lishide:ImgCoverFlow:${lsdImgCoverFlow}",
 
             //GSYVideoPlayer 视频播放器
             GSYVideoPlayer   : "com.github.CarGuo:GSYVideoPlayer:${GSYVideoPlayer}",

@@ -79,4 +79,6 @@ dependencies {
     compile viewDps.vptransforms
     //GSYVideoPlayer 视频播放器
     compile viewDps.GSYVideoPlayer
+    // CoverFlow
+    compile viewDps.lsdImgCoverFlow
 }

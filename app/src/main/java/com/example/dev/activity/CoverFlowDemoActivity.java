@@ -5,10 +5,10 @@ import android.view.View;
 import android.widget.Button;
 
 import com.base.adev.activity.BaseActivity;
-import com.base.adev.view.coverflow.CoverFlowView;
 import com.example.dev.R;
 import com.example.dev.adapter.CoverFlowAdapter;
 import com.example.dev.bean.ChannelBean;
+import com.img.coverflow.widget.CoverFlowView;
 
 import java.util.ArrayList;
 import java.util.List;

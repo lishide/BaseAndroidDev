@@ -8,7 +8,7 @@
 
     <include layout="@layout/layout_toolbar"/>
 
-    <com.base.adev.view.coverflow.CoverFlowView
+    <com.img.coverflow.widget.CoverFlowView
         android:id="@+id/coverflow"
         android:layout_width="match_parent"
         android:layout_height="0dp"

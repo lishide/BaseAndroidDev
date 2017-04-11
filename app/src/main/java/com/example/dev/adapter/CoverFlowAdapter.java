@@ -7,10 +7,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.base.adev.utils.MyBitmapImageViewTarget;
-import com.base.adev.view.coverflow.ICoverFlowAdapter;
 import com.bumptech.glide.Glide;
 import com.example.dev.R;
 import com.example.dev.bean.ChannelBean;
+import com.img.coverflow.widget.ICoverFlowAdapter;
 
 import java.util.List;
 
