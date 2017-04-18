@@ -106,80 +106,108 @@ NoHttp —— 一个有情怀的网络框架 ，让你的网络请求更简单�
 
 #### - [Gson](https://github.com/google/gson)
 比较常用的 JSON 解析序列化库
+
 **`compile 'com.google.code.gson:gson:2.7'`**
 
 #### - [Glide](https://github.com/bumptech/glide)
 图片加载库
+
 An image loading and caching library for Android focused on smooth scrolling
+
 **`compile 'com.github.bumptech.glide:glide:3.7.0'`**
 
 #### - [Bottom Navigation Bar](https://github.com/Ashok-Varma/BottomNavigation)
 This Library helps users to use Bottom Navigation Bar (A new pattern from google) with ease and allows ton of customizations
+
 **`compile 'com.ashokvarma.android:bottom-navigation-bar:1.4.1'`**
 
 #### - [SVProgressHUD](https://github.com/saiwu-bigkoo/Android-SVProgressHUD)
 精仿 iOS 的提示库 SVProgressHUD
+
 **`compile 'com.bigkoo:svprogresshud:1.0.6'`**
 
 #### - [SwipeRecyclerView](https://github.com/yanzhenjie/SwipeRecyclerView)
 RecyclerView 侧滑菜单，Item拖拽，滑动删除 Item，自动加载更多，和 ViewPager、DrawerLayout 结合使用，和任何下拉刷新框架结合使用。
+
 **`compile 'com.yanzhenjie:recyclerview-swipe:1.0.4'`**
 
 #### - [省市区三级联动](https://github.com/crazyandcoder/citypicker)
 citypicker 高仿 iOS 滚轮实现 省市区 城市选择三级联动
+
 **`compile 'liji.library.dev:citypickerview:0.9.0'`**
 
 #### - [RxGalleryFinal](https://github.com/FinalTeam/RxGalleryFinal)
 图片/视频文件选择器
+
 **`compile 'cn.finalteam.rxgalleryfinal:library:0.0.9'`**
 
 #### - [MaterialDialog](https://github.com/drakeet/MaterialDialog)
 Material Design 风格的自定义 Dialog
+
 **`compile 'me.drakeet.materialdialog:library:1.3.1'`**
 
 #### - [CircleImageView](https://github.com/hdodenhof/CircleImageView)
 A circular ImageView for Android
+
 **`compile 'de.hdodenhof:circleimageview:2.1.0'`**
 
 #### - [PhotoView](https://github.com/bm-x/PhotoView)
 图片浏览缩放控件
+
 **`compile 'com.bm.photoview:library:1.4.1'`**
 
 #### - [Banner](https://github.com/saiwu-bigkoo/Android-ConvenientBanner)
 广告栏控件
+
 **`compile 'com.bigkoo:convenientbanner:2.0.5'`**
 
-#### - [各种翻页效果](https://github.com/saiwu-bigkoo/Android-ConvenientBanner)
+#### - [翻页效果](https://github.com/saiwu-bigkoo/Android-ConvenientBanner)
+各种翻页效果
 
 **`compile 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:1.2.32@aar'`**
 
 #### - [GSYVideoPlayer 视频播放器](https://github.com/CarGuo/GSYVideoPlayer)
 视频播放器（IJKplayer），HTTPS支持，支持弹幕，支持基本的拖动，声音、亮度调节，支持边播边缓存，支持视频本身自带rotation的旋转（90,270之类），重力旋转与手动旋转的同步支持，支持列表播放 ，直接添加控件为封面，列表全屏动画，视频加载速度，列表小窗口支持拖动，5.0的过场效果，调整比例，多分辨率切换，支持切换播放器，进度条小窗口预览，其他一些小动画效果。
+
 **`compile 'com.github.CarGuo:GSYVideoPlayer:v1.6.1'`**
 
 #### - [AndroidVideoCache](https://github.com/danikula/AndroidVideoCache)
 Cache support for any video player with help of single line
+
 **`compile 'com.danikula:videocache:2.6.4'`**
 
 #### - [BaseRecyclerViewAdapterHelper](https://github.com/CymChad/BaseRecyclerViewAdapterHelper)
 RecyclerView 的强大的 BaseAdapter
+
 **`compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.3'`**
 
 #### - [Volley](https://github.com/lishide/MyVolley)
 网络请求框架
+
 **`compile 'com.mcxiaoke.volley:library:1.0.19'`**
 
 #### - [NoHttp](https://github.com/yanzhenjie/NoHttp)
 Android实现Http标准协议框架，支持缓存（提供五种缓存模式）、代理、重定向，底层可动态切换OkHttp、URLConnection，与RxJava完美结合，比Retrofit更简单易用。 http://www.nohttp.net
+
 **`compile 'com.yanzhenjie.nohttp:okhttp:1.1.1'`**
 
 #### - [AndPermission](https://github.com/yanzhenjie/AndPermission)
 Android 6.0运行时权限管理
+
 **`compile 'com.yanzhenjie:permission:1.0.5'`**
 
 #### - [Butter Knife](https://github.com/JakeWharton/butterknife)
 Bind Android views and callbacks to fields and methods.
 
+#### - [NoHttpConnecter](https://github.com/lishide/NoHttpConnecter)
+小编简单封装的 NoHttp
+
+**`compile 'com.github.lishide:NoHttpConnecter:v1.0.1'`**
+
+#### - [ImgCoverFlow](https://github.com/lishide/ImgCoverFlow)
+CoverFlow 列表
+
+**`compile 'com.github.lishide:ImgCoverFlow:v1.0.1'`**
 
 **Ps：以上开源库版本可能不是最新的，建议使用时查看原作 GitHub 使用最新版。**
 
