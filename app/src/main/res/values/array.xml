@@ -17,6 +17,7 @@
         <item>12. Material Dialog示例</item>
         <item>13. 仿iOS的Dialog</item>
         <item>14. 乐播投屏 Demo</item>
+        <item>15. MD 商品详情界面示例</item>
     </string-array>
 
     <string-array name="main_item_des">
@@ -45,6 +46,8 @@
         <item>12. Material Design 风格的自定义Dialog，GitHub地址：https://github.com/drakeet/MaterialDialog</item>
         <item>13. 仿iOS的Dialog示例</item>
         <item>14. 演示“乐播投屏 SDK”投屏与镜像的接入和关闭等功能</item>
+        <item>15. MD 商品详情界面示例\n
+            仿某些购物 App 的商品展示界面，及多种布局交互动画的简单使用</item>
     </string-array>
 
     <!--多功能 RecyclerView 展示列表数据-->

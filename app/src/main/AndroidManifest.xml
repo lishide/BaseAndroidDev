@@ -91,6 +91,7 @@
         <activity
             android:name=".activity.HpplayActivity"
             android:configChanges="screenSize|orientation"/>
+        <activity android:name=".activity.MDGoodsDtlActivity"/>
     </application>
 
 </manifest>

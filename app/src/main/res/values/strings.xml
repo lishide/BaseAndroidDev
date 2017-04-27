@@ -31,6 +31,10 @@
     <string name="txt_m_dlg">Material Dialog 示例</string>
     <string name="text_iOS_dialog">仿iOS的Dialog</string>
     <string name="text_hpplay">乐播投屏 Demo</string>
+    <string name="text_goods_dtl">MD 商品详情界面示例</string>
+    <string name="text_goods_dtl_desc">此界面是AppBarLayout、TabLayout、FloatingActionButton、动画等
+        功能的结合使用示例。我是图片，这里可以更换为 banner，显示多张图片。下面的每个 Tab 里都可以是列表。
+        亮点是底部的动画效果，点一下吧。</string>
 
     <string name="large_text">
         "Material is the metaphor.\n\n"

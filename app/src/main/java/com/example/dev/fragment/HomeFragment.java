@@ -20,6 +20,7 @@ import com.example.dev.activity.GSYVideoActivity;
 import com.example.dev.activity.GalleryActivity;
 import com.example.dev.activity.HpplayActivity;
 import com.example.dev.activity.LikeIosDialogActivity;
+import com.example.dev.activity.MDGoodsDtlActivity;
 import com.example.dev.activity.MaterialDialogActivity;
 import com.example.dev.activity.TabLayDemoActivity;
 import com.example.dev.activity.TextDemoActivity;
@@ -130,6 +131,10 @@ public class HomeFragment extends BaseFragment {
                 case 14:
                     bundle.putString("title", getString(R.string.text_hpplay));
                     readyGo(HpplayActivity.class, bundle);
+                    break;
+                case 15:
+                    bundle.putString("title", getString(R.string.text_goods_dtl));
+                    readyGo(MDGoodsDtlActivity.class, bundle);
                     break;
             }
         }
