@@ -14,7 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.base.adev.activity.BaseActivity;
-import com.base.adev.adapter.TabAdapter;
+import com.base.adev.adapter.BaseFragmentStatePagerAdapter;
 import com.example.dev.R;
 import com.example.dev.fragment.TabLayFragment;
 
@@ -29,7 +29,7 @@ public class MDGoodsDtlActivity extends BaseActivity implements View.OnClickList
     private AnimatorSet showAnim, hiddenAnim;
     private long fWidth, fHeight, bHeight;
     private TextView tvCloseBottom;
-    private TabAdapter mTabAdapter;
+    private BaseFragmentStatePagerAdapter mBaseFragmentStatePagerAdapter;
 
     @Override
     protected void initContentView(Bundle bundle) {
@@ -43,8 +43,8 @@ public class MDGoodsDtlActivity extends BaseActivity implements View.OnClickList
 
         TabLayout mTabLayout = (TabLayout) findViewById(R.id.tab_layout);
         ViewPager mViewPager = (ViewPager) findViewById(R.id.view_pager_detail);
-        mTabAdapter = new TabAdapter(getSupportFragmentManager());
-        mViewPager.setAdapter(mTabAdapter);
+        mBaseFragmentStatePagerAdapter = new BaseFragmentStatePagerAdapter(getSupportFragmentManager());
+        mViewPager.setAdapter(mBaseFragmentStatePagerAdapter);
         mTabLayout.setupWithViewPager(mViewPager);
 
         frontView = (LinearLayout) findViewById(R.id.ll_front);
@@ -56,8 +56,8 @@ public class MDGoodsDtlActivity extends BaseActivity implements View.OnClickList
         mToolbar.setTitle(title);
         for (int i = 0; i < 3; i++) {
             TabLayFragment fragment = new TabLayFragment();
-            mTabAdapter.addFragment(fragment, "推荐 " + i);
-            mTabAdapter.notifyDataSetChanged();
+            mBaseFragmentStatePagerAdapter.addFragment(fragment, "推荐 " + i);
+            mBaseFragmentStatePagerAdapter.notifyDataSetChanged();
         }
 
         fab.setOnClickListener(this);
