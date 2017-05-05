@@ -17,5 +17,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         app:bnbAutoHideEnabled="true"/>
-    <!--如果不想隐藏BottomNavigationBar，设置 app:bnbAutoHideEnabled="true"-->
+    <!--如果不想隐藏BottomNavigationBar，设置 app:bnbAutoHideEnabled="false"-->
 </android.support.design.widget.CoordinatorLayout>
