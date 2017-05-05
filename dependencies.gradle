@@ -4,8 +4,8 @@ ext {
     androidMinSdkVersion = 16
     androidTargetSdkVersion = 25
     androidCompileSdkVersion = 25
-    supportLibraryVersion = '25.3.0'
-    otherLibraryVersion = '25.3.0'
+    supportLibraryVersion = '25.3.1'
+    otherLibraryVersion = '25.3.1'
     applicationId = 'com.example.dev'
     versionCode = 1
     versionName = '1.0'

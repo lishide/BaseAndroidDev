@@ -52,6 +52,7 @@ dependencies {
     compile androidDps.support_v4
     compile androidDps.design
     compile androidDps.cardview_v7
+    compile androidDps.constraintLayout
     compile project(path: ':base-android-dev')
     compile project(':base-android-dev')
 
