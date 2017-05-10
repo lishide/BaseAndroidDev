@@ -1,5 +1,8 @@
 ## 下方各个版本说明，可以当做简单的 wiki 使用~，效果可参考 DEMO。
 
+### 1.0.7
+* 日常维护，版本更新
+
 ### 1.0.5
 * 升级 supportLibraryVersion，lib 中取消 support Library 的引用
 
