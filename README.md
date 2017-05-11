@@ -208,6 +208,10 @@ Bind Android views and callbacks to fields and methods.
 CoverFlow 列表
 
 **`compile 'com.github.lishide:ImgCoverFlow:v1.0.1'`**
+#### - [MarqueeViewLibrary](https://github.com/gongwen/MarqueeViewLibrary)
+通过MarqueeFactory来提供各种样式的跑马灯View，支持自定义跑马灯ItemView
+
+**`compile 'compile 'com.gongwen:marqueelibrary:1.0.4'`**
 
 **Ps：以上开源库版本可能不是最新的，建议使用时查看原作 GitHub 使用最新版。**
 

@@ -82,4 +82,6 @@ dependencies {
     compile viewDps.GSYVideoPlayer
     // CoverFlow
     compile viewDps.lsdImgCoverFlow
+    //跑马灯
+    compile viewDps.gwMarqueeLib
 }

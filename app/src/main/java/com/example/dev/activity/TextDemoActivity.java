@@ -11,10 +11,15 @@ import com.base.adev.utils.ScreenUtil;
 import com.base.adev.view.MarqueeTextView;
 import com.base.adev.view.NoticeView;
 import com.example.dev.R;
+import com.example.dev.view.NoticeMF;
+import com.gongwen.marqueen.MarqueeFactory;
+import com.gongwen.marqueen.MarqueeView;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 public class TextDemoActivity extends BaseActivity {
@@ -23,6 +28,9 @@ public class TextDemoActivity extends BaseActivity {
     private MarqueeTextView marqueeTextView;//跑马灯控件
     private NoticeView noticeView;//广告条控件
     private TextView mTextView;//LED文字控件
+    private final List<String> datas = Arrays.asList("《赋得古原草送别》", "离离原上草，一岁一枯荣。",
+            "野火烧不尽，春风吹又生。", "远芳侵古道，晴翠接荒城。", "又送王孙去，萋萋满别情。");
+    private MarqueeView marqueeView2;
 
     @Override
     protected void initContentView(Bundle bundle) {
@@ -71,6 +79,19 @@ public class TextDemoActivity extends BaseActivity {
         });
 
         noticeView.start(2000);
+
+        marqueeView2 = (MarqueeView) findViewById(R.id.marqueeView2);
+        final MarqueeFactory<TextView, String> marqueeFactory2 = new NoticeMF(this);
+        marqueeFactory2.setOnItemClickListener(new MarqueeFactory.OnItemClickListener<TextView, String>() {
+            @Override
+            public void onItemClickListener(MarqueeFactory.ViewHolder<TextView, String> holder) {
+                showShortToast(holder.data);
+
+            }
+        });
+        marqueeFactory2.setData(datas);
+        marqueeView2.setMarqueeFactory(marqueeFactory2);
+        marqueeView2.startFlipping();
     }
 
     @Override
@@ -82,12 +103,19 @@ public class TextDemoActivity extends BaseActivity {
     protected void onResume() {
         super.onResume();
         handler.post(mTimeRefresher);
+        marqueeView2.startFlipping();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
         handler.removeCallbacks(mTimeRefresher);
+        marqueeView2.stopFlipping();
     }
 
     @Override

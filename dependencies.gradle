@@ -25,6 +25,7 @@ ext {
     lsdImgCoverFlow = 'v1.0.0'
     GSYVideoPlayer = 'v1.6.1'
     baservadapter = '2.9.3'
+    gwMarqueeLib = '1.0.4'
 
     //DataLibraries
     volley = '1.0.19'
@@ -77,6 +78,7 @@ ext {
 
             //RecyclerView 的强大的 BaseAdapter
             baservadapter    : "com.github.CymChad:BaseRecyclerViewAdapterHelper:${baservadapter}",
+            gwMarqueeLib     : "com.gongwen:marqueelibrary:${gwMarqueeLib}",
     ]
 
     dataDependencies = [
