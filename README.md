@@ -19,8 +19,8 @@ allprojects {
 
 ```java
 dependencies {
-            compile 'com.github.lishide:BaseAndroidDev:v+latest version' //latest version 见上方 JitPack 图标所示
-            //如：
+            compile 'com.github.lishide:BaseAndroidDev:v+latest version'
+            //latest version 见上方 JitPack 图标所示，如：
             compile 'com.github.lishide:BaseAndroidDev:v1.0.7'
     }
 ```
@@ -191,12 +191,12 @@ RecyclerView 的强大的 BaseAdapter
 #### - [NoHttp](https://github.com/yanzhenjie/NoHttp)
 Android实现Http标准协议框架，支持缓存（提供五种缓存模式）、代理、重定向，底层可动态切换OkHttp、URLConnection，与RxJava完美结合，比Retrofit更简单易用。 http://www.nohttp.net
 
-**`compile 'com.yanzhenjie.nohttp:okhttp:1.1.1'`**
+**`compile 'com.yanzhenjie.nohttp:okhttp:1.1.2'`**
 
 #### - [AndPermission](https://github.com/yanzhenjie/AndPermission)
 Android 6.0运行时权限管理
 
-**`compile 'com.yanzhenjie:permission:1.0.5'`**
+**`compile 'com.yanzhenjie:permission:1.0.7'`**
 
 #### - [Butter Knife](https://github.com/JakeWharton/butterknife)
 Bind Android views and callbacks to fields and methods.
@@ -204,7 +204,7 @@ Bind Android views and callbacks to fields and methods.
 #### - [NoHttpConnecter](https://github.com/lishide/NoHttpConnecter)
 小编简单封装的 NoHttp
 
-**`compile 'com.github.lishide:NoHttpConnecter:v1.0.1'`**
+**`compile 'com.github.lishide:NoHttpConnecter:v1.0.2'`**
 
 #### - [ImgCoverFlow](https://github.com/lishide/ImgCoverFlow)
 CoverFlow 列表
