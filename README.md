@@ -19,6 +19,8 @@ allprojects {
 
 ```java
 dependencies {
+            compile 'com.github.lishide:BaseAndroidDev:v+latest version' //latest version 见上方 JitPack 图标所示
+            //如：
             compile 'com.github.lishide:BaseAndroidDev:v1.0.7'
     }
 ```
