@@ -1,5 +1,7 @@
 package com.example.dev.activity;
 
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -27,6 +29,7 @@ public class GSYPlayerRVDisActivity extends BaseActivity {
     private RecyclerView mRvGsyPlayer;
     private LinearLayoutManager linearLayoutManager;
     private List<VideoModel> dataList = new ArrayList<>();
+    private boolean mFull = false;
 
     @Override
     protected void initContentView(Bundle bundle) {
@@ -77,8 +80,11 @@ public class GSYPlayerRVDisActivity extends BaseActivity {
                             && (position < firstVisibleItem || position > lastVisibleItem)) {
 
                         //如果滑出去了上面和下面就是否，和今日头条一样
-                        GSYVideoPlayer.releaseAllVideos();
-                        rvVideoDisAdapter.notifyDataSetChanged();
+                        //是否全屏
+                        if (!mFull) {
+                            GSYVideoPlayer.releaseAllVideos();
+                            rvVideoDisAdapter.notifyDataSetChanged();
+                        }
                     }
                 }
             }
@@ -88,6 +94,17 @@ public class GSYPlayerRVDisActivity extends BaseActivity {
     @Override
     protected void getBundleExtras(Bundle extras) {
         title = extras.getString("title");
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        //如果旋转了就全屏
+        if (newConfig.orientation != ActivityInfo.SCREEN_ORIENTATION_USER) {
+            mFull = false;
+        } else {
+            mFull = true;
+        }
     }
 
     @Override

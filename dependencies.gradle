@@ -23,7 +23,7 @@ ext {
     convenientbanner = '2.0.5'
     vptransforms = '1.2.32@aar'
     lsdImgCoverFlow = 'v1.0.0'
-    GSYVideoPlayer = 'v1.6.1'
+    GSYVideoPlayer = 'v1.6.7'
     baservadapter = '2.9.3'
     gwMarqueeLib = '1.0.4'
 
