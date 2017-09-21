@@ -4,6 +4,7 @@ import android.annotation.TargetApi;
 import android.content.pm.ActivityInfo;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.view.ViewCompat;
 import android.transition.Transition;
 import android.view.View;
@@ -14,7 +15,7 @@ import com.example.dev.R;
 import com.example.dev.bean.SwitchVideoModel;
 import com.example.dev.listener.OnTransitionListener;
 import com.example.dev.video.SampleVideo;
-import com.shuyu.gsyvideoplayer.GSYVideoPlayer;
+import com.shuyu.gsyvideoplayer.video.base.GSYVideoPlayer;
 import com.shuyu.gsyvideoplayer.utils.OrientationUtils;
 
 import java.util.ArrayList;
@@ -59,7 +60,7 @@ public class GSYPlayerActivity extends BaseActivity {
         videoPlayer = (SampleVideo) findViewById(R.id.video_player);
 
 
-        videoPlayer.setUp(list, true, "");
+        videoPlayer.setUp(list, true, "测试视频");
 
         //增加封面
         ImageView imageView = new ImageView(this);
@@ -69,7 +70,11 @@ public class GSYPlayerActivity extends BaseActivity {
 
         //增加title
         videoPlayer.getTitleTextView().setVisibility(View.VISIBLE);
-        videoPlayer.getTitleTextView().setText("测试视频");
+        //videoPlayer.getTitleTextView().setText("测试视频");
+
+        //videoPlayer.setShowPauseCover(false);
+
+        //videoPlayer.setSpeed(2f);
 
         //设置返回键
         videoPlayer.getBackButton().setVisibility(View.VISIBLE);
@@ -77,7 +82,7 @@ public class GSYPlayerActivity extends BaseActivity {
         //设置旋转
         orientationUtils = new OrientationUtils(this, videoPlayer);
 
-        //设置全屏按键功能
+        //设置全屏按键功能,这是使用的是选择屏幕，而不是全屏
         videoPlayer.getFullscreenButton().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -126,6 +131,7 @@ public class GSYPlayerActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        videoPlayer.onVideoResume();
     }
 
     @TargetApi(Build.VERSION_CODES.KITKAT)
@@ -149,8 +155,13 @@ public class GSYPlayerActivity extends BaseActivity {
         if (isTransition && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             super.onBackPressed();
         } else {
-            finish();
-            overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    finish();
+                    overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
+                }
+            }, 500);
         }
     }
 

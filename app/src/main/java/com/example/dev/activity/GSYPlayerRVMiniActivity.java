@@ -15,7 +15,7 @@ import com.example.dev.adapter.RvVideoMiniAdapter;
 import com.example.dev.bean.VideoModel;
 import com.example.dev.listener.SampleVideoListener;
 import com.shuyu.gsyvideoplayer.GSYVideoManager;
-import com.shuyu.gsyvideoplayer.GSYVideoPlayer;
+import com.shuyu.gsyvideoplayer.video.base.GSYVideoPlayer;
 import com.shuyu.gsyvideoplayer.utils.CommonUtil;
 import com.shuyu.gsyvideoplayer.utils.Debuger;
 import com.shuyu.gsyvideoplayer.utils.ListVideoUtil;
