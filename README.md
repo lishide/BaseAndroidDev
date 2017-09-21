@@ -109,7 +109,7 @@ NoHttp —— 一个有情怀的网络框架 ，让你的网络请求更简单�
 #### - [Gson](https://github.com/google/gson)
 比较常用的 JSON 解析序列化库
 
-**`compile 'com.google.code.gson:gson:2.7'`**
+**`compile 'com.google.code.gson:gson:2.8.2'`**
 
 #### - [Glide](https://github.com/bumptech/glide)
 图片加载库
@@ -121,7 +121,7 @@ An image loading and caching library for Android focused on smooth scrolling
 #### - [Bottom Navigation Bar](https://github.com/Ashok-Varma/BottomNavigation)
 This Library helps users to use Bottom Navigation Bar (A new pattern from google) with ease and allows ton of customizations
 
-**`compile 'com.ashokvarma.android:bottom-navigation-bar:1.4.1'`**
+**`compile 'com.ashokvarma.android:bottom-navigation-bar:2.0.2'`**
 
 #### - [SVProgressHUD](https://github.com/saiwu-bigkoo/Android-SVProgressHUD)
 精仿 iOS 的提示库 SVProgressHUD
@@ -196,7 +196,7 @@ Android实现Http标准协议框架，支持缓存（提供五种缓存模式）
 #### - [AndPermission](https://github.com/yanzhenjie/AndPermission)
 Android 6.0运行时权限管理
 
-**`compile 'com.yanzhenjie:permission:1.0.7'`**
+**`compile 'com.yanzhenjie:permission:1.1.0'`**
 
 #### - [Butter Knife](https://github.com/JakeWharton/butterknife)
 Bind Android views and callbacks to fields and methods.
@@ -204,7 +204,7 @@ Bind Android views and callbacks to fields and methods.
 #### - [NoHttpConnecter](https://github.com/lishide/NoHttpConnecter)
 小编简单封装的 NoHttp
 
-**`compile 'com.github.lishide:NoHttpConnecter:v1.0.2'`**
+**`compile 'com.github.lishide:NoHttpConnecter:v1.0.3'`**
 
 #### - [ImgCoverFlow](https://github.com/lishide/ImgCoverFlow)
 CoverFlow 列表

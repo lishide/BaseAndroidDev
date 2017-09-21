@@ -30,7 +30,7 @@ ext {
     //DataLibraries
     volley = '1.0.19'
     glide = '3.7.0'
-    gson = '2.7'
+    gson = '2.8.2'
 
     androidDependencies = [
             appcompat_v7    : "com.android.support:appcompat-v7:${supportLibraryVersion}",
