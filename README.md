@@ -221,6 +221,16 @@ CoverFlow 列表
 
 **`compile 'org.greenrobot:eventbus:3.0.0'`**
 
+#### - [Album](https://github.com/yanzhenjie/Album)
+Album是一个MD风格的开源相册，支持国际化，支持国际化扩展；主要功能模块：选择图片与视频、拍照、录视频、画廊（支持本地和网络）。
+
+**`compile 'com.yanzhenjie:album:2.0.0'`**
+
+#### - [Durban](https://github.com/yanzhenjie/Durban)
+Durban是一个MD风格的图片裁剪工具
+
+**`compile 'com.yanzhenjie:durban:1.0.1'`**
+
 **Ps：以上开源库版本可能不是最新的，建议使用时查看原作 GitHub 使用最新版。**
 
 ## 六、Material Design
