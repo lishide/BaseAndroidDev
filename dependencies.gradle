@@ -1,6 +1,6 @@
 ext {
     //Android
-    androidBuildToolsVersion = "25.0.2"
+    androidBuildToolsVersion = "26.0.2"
     androidMinSdkVersion = 16
     androidTargetSdkVersion = 25
     androidCompileSdkVersion = 25

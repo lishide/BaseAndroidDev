@@ -29,7 +29,6 @@ android {
         }
     }
     sourceSets { main { res.srcDirs = ['src/main/res', 'src/main/res/drawable'] } }
-    buildToolsVersion '26.0.2'
 }
 
 repositories {
